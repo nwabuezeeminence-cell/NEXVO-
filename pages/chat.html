@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Chat</title>
+
+
+    <!-- GLOBAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- CHAT -->
+
+    <link
+        rel="stylesheet"
+        href="../css/chat.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         CHAT PAGE
+    ====================================== -->
+
+    <main class="chat-page">
+
+
+        <!-- =================================
+             CHAT HEADER
+        ================================== -->
+
+        <header class="chat-header">
+
+
+            <!-- BACK -->
+
+            <button
+                class="chat-back-button"
+                id="chatBackButton"
+                type="button"
+                aria-label="Back"
+            >
+
+                ←
+
+            </button>
+
+
+
+            <!-- PERSON -->
+
+            <button
+                class="chat-person"
+                id="chatPersonButton"
+                type="button"
+            >
+
+                <div
+                    class="chat-header-avatar"
+                    id="chatAvatar"
+                >
+                    👤
+                </div>
+
+
+                <div class="chat-person-info">
+
+                    <strong
+                        id="chatName"
+                    >
+                        NEXVO Member
+                    </strong>
+
+
+                    <span
+                        id="chatStatus"
+                    >
+                        offline
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="chat-header-actions">
+
+
+                <button
+                    class="chat-header-action"
+                    id="videoCallButton"
+                    type="button"
+                    aria-label="Video call"
+                >
+
+                    🎥
+
+                </button>
+
+
+                <button
+                    class="chat-header-action"
+                    id="voiceCallButton"
+                    type="button"
+                    aria-label="Voice call"
+                >
+
+                    📞
+
+                </button>
+
+
+                <button
+                    class="chat-header-action"
+                    id="chatMoreButton"
+                    type="button"
+                    aria-label="More"
+                >
+
+                    ⋮
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================
+             MESSAGES
+        ================================== -->
+
+        <section
+            class="messages-area"
+            id="messagesArea"
+        >
+
+            <!-- Messages are inserted here -->
+
+        </section>
+
+
+
+        <!-- =================================
+             TYPING INDICATOR
+        ================================== -->
+
+        <div
+            class="typing-indicator"
+            id="typingIndicator"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+
+        <!-- =================================
+             MESSAGE COMPOSER
+        ================================== -->
+
+        <div class="composer-wrapper">
+
+
+            <div class="message-composer">
+
+
+                <!-- ATTACHMENT -->
+
+                <button
+                    class="composer-button"
+                    id="attachmentButton"
+                    type="button"
+                    aria-label="Attach"
+                >
+
+                    ＋
+
+                </button>
+
+
+
+                <!-- TEXT -->
+
+                <textarea
+                    id="messageInput"
+                    class="message-input"
+                    rows="1"
+                    placeholder="Message..."
+                    maxlength="2000"
+                ></textarea>
+
+
+
+                <!-- EMOJI -->
+
+                <button
+                    class="composer-button"
+                    id="emojiButton"
+                    type="button"
+                    aria-label="Emoji"
+                >
+
+                    😊
+
+                </button>
+
+
+
+                <!-- SEND -->
+
+                <button
+                    class="send-button"
+                    id="sendButton"
+                    type="button"
+                    aria-label="Send"
+                >
+
+                    ➤
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUICK EMOJI BAR
+            ================================== -->
+
+            <div
+                class="emoji-bar"
+                id="emojiBar"
+            >
+
+                <button type="button">❤️</button>
+
+                <button type="button">😂</button>
+
+                <button type="button">👍</button>
+
+                <button type="button">🔥</button>
+
+                <button type="button">😍</button>
+
+                <button type="button">😮</button>
+
+                <button type="button">😢</button>
+
+                <button type="button">🎉</button>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         CHAT MORE MENU
+    ====================================== -->
+
+    <div
+        class="chat-menu-overlay"
+        id="chatMenuOverlay"
+    ></div>
+
+
+    <div
+        class="chat-more-menu"
+        id="chatMoreMenu"
+    >
+
+        <button
+            type="button"
+            data-menu-action="search"
+        >
+            🔍
+            <span>Search messages</span>
+        </button>
+
+
+        <button
+            type="button"
+            data-menu-action="clear"
+        >
+            🧹
+            <span>Clear conversation</span>
+        </button>
+
+
+        <button
+            type="button"
+            data-menu-action="block"
+        >
+            🚫
+            <span>Block member</span>
+        </button>
+
+
+        <button
+            type="button"
+            data-menu-action="close"
+        >
+            ✕
+            <span>Close</span>
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         SCRIPTS
+    ====================================== -->
+
+    <!-- FIREBASE -->
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+
+<!-- NEXVO FIREBASE -->
+
+<script src="../js/firebase-config.js"></script>
+
+<script src="../js/firebase-init.js"></script>
+
+<script src="../js/nexvo-identity.js"></script>
+
+
+<!-- EXISTING NEXVO DATA -->
+
+<script src="../data/nexvo-data.js"></script>
+
+
+<!-- REAL-TIME CHAT -->
+
+<script src="../js/chat.js"></script>
+
+
+</body>
+
+</html>

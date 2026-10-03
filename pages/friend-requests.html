@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Friend Requests</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/friend-requests.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="requests-page">
+
+
+    <!-- HEADER -->
+
+    <header class="requests-header">
+
+        <button
+            id="backButton"
+            type="button"
+        >
+            ‹
+        </button>
+
+
+        <div>
+
+            <h1>
+                Friend Requests
+            </h1>
+
+            <p>
+                Connect with people on NEXVO
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- RECEIVED REQUESTS -->
+
+    <section class="requests-section">
+
+        <div class="section-title">
+
+            <h2>
+                Requests
+            </h2>
+
+            <span id="requestCount">
+                0
+            </span>
+
+        </div>
+
+
+        <div
+            id="requestsList"
+            class="requests-list"
+        ></div>
+
+    </section>
+
+
+
+    <!-- SENT -->
+
+    <section class="requests-section sent-section">
+
+        <div class="section-title">
+
+            <h2>
+                Sent Requests
+            </h2>
+
+        </div>
+
+
+        <div
+            id="sentRequestsList"
+            class="requests-list"
+        ></div>
+
+    </section>
+
+
+
+</main>
+
+
+<script src="../data/identity.js"></script>
+<script src="../data/friends.js"></script>
+<script src="../js/friend-requests.js"></script>
+
+</body>
+
+</html>

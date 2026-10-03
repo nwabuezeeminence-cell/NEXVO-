@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Search</title>
+
+
+    <!-- GLOBAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- N BUTTON -->
+
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+
+    <!-- SEARCH -->
+
+    <link
+        rel="stylesheet"
+        href="../css/search.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <main class="search-page">
+
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="search-header">
+
+            <button
+                id="backButton"
+                class="search-back"
+                type="button"
+                aria-label="Go back"
+            >
+                ‹
+            </button>
+
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search NEXVO"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="clearSearch"
+                    class="clear-search"
+                    type="button"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             FILTERS
+        ================================== -->
+
+        <div class="search-filters">
+
+            <button
+                class="search-filter active"
+                data-type="all"
+                type="button"
+            >
+                All
+            </button>
+
+
+            <button
+                class="search-filter"
+                data-type="people"
+                type="button"
+            >
+                People
+            </button>
+
+
+            <button
+                class="search-filter"
+                data-type="groups"
+                type="button"
+            >
+                Groups
+            </button>
+
+
+            <button
+                class="search-filter"
+                data-type="communities"
+                type="button"
+            >
+                Communities
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================
+             RESULTS
+        ================================== -->
+
+        <section
+            id="searchResults"
+            class="search-results"
+        ></section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         UNIVERSAL N BUTTON
+    ====================================== -->
+
+    <button
+        id="nexvoGlobalButton"
+        class="nexvo-global-button"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+    >
+
+        <span>
+            N
+        </span>
+
+    </button>
+
+
+
+    <!-- =====================================
+         OVERLAY
+    ====================================== -->
+
+    <div
+        id="nexvoGlobalOverlay"
+        class="nexvo-global-overlay"
+    ></div>
+
+
+
+    <!-- =====================================
+         NEXVO MENU
+    ====================================== -->
+
+    <div
+        id="nexvoGlobalMenu"
+        class="nexvo-global-menu"
+        aria-hidden="true"
+    >
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        What would you like to do?
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="nexvoMenuClose"
+                class="nexvo-menu-close"
+                type="button"
+                aria-label="Close NEXVO menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <div class="nexvo-menu-actions">
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with someone on NEXVO
+                    </small>
+
+                </span>
+
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    🌐
+                </span>
+
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build your NEXVO community
+                    </small>
+
+                </span>
+
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    📞
+                </span>
+
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make Call
+                    </strong>
+
+                    <small>
+                        Start a NEXVO call
+                    </small>
+
+                </span>
+
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FIREBASE
+    ====================================== -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+
+    <!-- =====================================
+         NEXVO FIREBASE
+    ====================================== -->
+
+    <script src="../js/firebase-config.js"></script>
+
+    <script src="../js/firebase-init.js"></script>
+
+    <script src="../js/nexvo-identity.js"></script>
+
+
+    <!-- =====================================
+         EXISTING DATA
+    ====================================== -->
+
+    <script src="../data/nexvo-data.js"></script>
+
+
+    <!-- =====================================
+         N BUTTON
+    ====================================== -->
+
+    <script src="../js/nexvo-plus.js"></script>
+
+
+    <!-- =====================================
+         SEARCH
+    ====================================== -->
+
+    <script src="../js/search.js"></script>
+
+
+</body>
+
+</html>

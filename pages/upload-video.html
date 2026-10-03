@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Upload Video</title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/upload-video.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="upload-page">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="upload-header">
+
+        <button
+            id="uploadBackButton"
+            class="upload-back-button"
+            type="button"
+            aria-label="Go back"
+        >
+            ←
+        </button>
+
+
+        <div class="upload-title">
+
+            <div class="upload-title-icon">
+                ▶
+            </div>
+
+            <div>
+
+                <h1>
+                    Upload Video
+                </h1>
+
+                <p>
+                    Share something with NEXVO
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         VIDEO PICKER
+    ====================================== -->
+
+    <section class="upload-section">
+
+        <label
+            for="videoInput"
+            id="videoPicker"
+            class="video-picker"
+        >
+
+            <div class="video-picker-icon">
+                +
+            </div>
+
+
+            <h2>
+                Choose a video
+            </h2>
+
+
+            <p>
+                Select a video from your device
+            </p>
+
+
+            <span class="video-picker-button">
+                Select Video
+            </span>
+
+        </label>
+
+
+        <input
+            id="videoInput"
+            type="file"
+            accept="video/*"
+            hidden
+        >
+
+    </section>
+
+
+
+    <!-- =====================================
+         VIDEO PREVIEW
+    ====================================== -->
+
+    <section
+        id="previewSection"
+        class="preview-section"
+        hidden
+    >
+
+        <div class="preview-heading">
+
+            <div>
+
+                <h2>
+                    Preview
+                </h2>
+
+                <p>
+                    Check your video before sharing.
+                </p>
+
+            </div>
+
+
+            <button
+                id="removeVideoButton"
+                class="remove-video-button"
+                type="button"
+            >
+                Remove
+            </button>
+
+        </div>
+
+
+        <div class="video-preview">
+
+            <video
+                id="videoPreview"
+                controls
+                playsinline
+            ></video>
+
+        </div>
+
+
+        <div
+            id="videoFileInfo"
+            class="video-file-info"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         VIDEO DETAILS
+    ====================================== -->
+
+    <section
+        id="detailsSection"
+        class="details-section"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Video details
+            </h2>
+
+            <p>
+                Tell people what your video is about.
+            </p>
+
+        </div>
+
+
+        <div class="form-field">
+
+            <label for="videoTitle">
+                Title
+            </label>
+
+
+            <input
+                id="videoTitle"
+                type="text"
+                maxlength="100"
+                placeholder="Give your video a title"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="form-field">
+
+            <label for="videoDescription">
+                Description
+            </label>
+
+
+            <textarea
+                id="videoDescription"
+                maxlength="500"
+                rows="5"
+                placeholder="Tell people about your video..."
+            ></textarea>
+
+
+            <small>
+
+                <span id="descriptionCount">
+                    0
+                </span>
+
+                / 500
+
+            </small>
+
+        </div>
+
+
+
+        <!-- =====================================
+             VIDEO ACTIONS
+        ====================================== -->
+
+        <div class="video-upload-actions">
+
+            <button
+                id="saveDraftButton"
+                class="save-draft-button"
+                type="button"
+            >
+
+                <span>
+                    ▣
+                </span>
+
+                Save Draft
+
+            </button>
+
+
+            <button
+                id="shareVideoButton"
+                class="share-video-button"
+                type="button"
+            >
+
+                <span>
+                    ▶
+                </span>
+
+                Share Video
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         LOCAL LIBRARY
+    ====================================== -->
+
+    <section
+        id="uploadedSection"
+        class="uploaded-section"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Ready to watch
+            </h2>
+
+            <p>
+                This video is currently available
+                on this device.
+            </p>
+
+        </div>
+
+
+        <div
+            id="uploadedVideoList"
+            class="uploaded-video-list"
+        ></div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     UNIVERSAL N BUTTON
+====================================== -->
+
+<button
+    class="nexvo-global-button"
+    id="nexvoGlobalButton"
+    type="button"
+    aria-label="Open NEXVO menu"
+    aria-expanded="false"
+>
+
+    <span>
+        N
+    </span>
+
+</button>
+
+
+<div
+    class="nexvo-global-overlay"
+    id="nexvoGlobalOverlay"
+></div>
+
+
+<section
+    class="nexvo-global-menu"
+    id="nexvoGlobalMenu"
+    aria-label="NEXVO menu"
+>
+
+    <div class="nexvo-menu-header">
+
+        <div class="nexvo-menu-title">
+
+            <div class="nexvo-menu-logo">
+                N
+            </div>
+
+            <div>
+
+                <strong>
+                    NEXVO
+                </strong>
+
+                <span>
+                    Quick actions
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="nexvo-menu-close"
+            id="nexvoMenuClose"
+            type="button"
+            aria-label="Close menu"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="nexvo-menu-actions">
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="friend"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                👤
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Add Friend
+                </strong>
+
+                <small>
+                    Connect with another person
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="group"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                👥
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Create Group
+                </strong>
+
+                <small>
+                    Start a group conversation
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="community"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                ◎
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Create Community
+                </strong>
+
+                <small>
+                    Build a community
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="call"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                ☎
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Make a Call
+                </strong>
+
+                <small>
+                    Start an audio or video call
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="../js/nexvo-plus.js"></script>
+
+<script src="../js/upload-video.js"></script>
+
+
+</body>
+
+</html>

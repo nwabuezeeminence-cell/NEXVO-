@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Settings</title>
+
+
+    <!-- GLOBAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- NEXVO N BUTTON -->
+
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+
+    <!-- SETTINGS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/settings.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <main class="settings-page">
+
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="settings-header">
+
+            <button
+                id="backButton"
+                class="settings-back"
+                type="button"
+                aria-label="Go back"
+            >
+                ‹
+            </button>
+
+
+            <div>
+
+                <span class="page-label">
+                    NEXVO
+                </span>
+
+                <h1>
+                    Settings
+                </h1>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             ACCOUNT
+        ================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                Account
+            </h2>
+
+
+            <button
+                class="settings-item"
+                data-setting="profile"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    👤
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Profile
+                    </strong>
+
+                    <small>
+                        Manage your profile information
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="settings-item"
+                data-setting="privacy"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    🔐
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Privacy & Security
+                    </strong>
+
+                    <small>
+                        Control your privacy and security
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             APPEARANCE
+        ================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                Appearance
+            </h2>
+
+
+            <button
+                class="settings-item"
+                data-setting="theme"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    🎨
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Theme
+                    </strong>
+
+                    <small>
+                        Choose how NEXVO looks
+                    </small>
+
+                </span>
+
+                <span
+                    id="themeValue"
+                    class="settings-value"
+                >
+                    System
+                </span>
+
+            </button>
+
+
+            <button
+                class="settings-item"
+                data-setting="notifications"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    🔔
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <small>
+                        Manage your notifications
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             CHAT
+        ================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                Chats
+            </h2>
+
+
+            <button
+                class="settings-item"
+                data-setting="chat"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    💬
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Chat Settings
+                    </strong>
+
+                    <small>
+                        Manage your conversation preferences
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="settings-item"
+                data-setting="media"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    🖼️
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Media & Storage
+                    </strong>
+
+                    <small>
+                        Manage media and storage preferences
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             ABOUT
+        ================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                About
+            </h2>
+
+
+            <button
+                class="settings-item"
+                data-setting="help"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    ❓
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        Help & Support
+                    </strong>
+
+                    <small>
+                        Get help with NEXVO
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="settings-item"
+                data-setting="about"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    ℹ️
+                </span>
+
+                <span class="settings-content">
+
+                    <strong>
+                        About NEXVO
+                    </strong>
+
+                    <small>
+                        Learn more about NEXVO
+                    </small>
+
+                </span>
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             VERSION
+        ================================== -->
+
+        <div class="settings-version">
+
+            NEXVO
+
+            <span>
+                Version 1.0
+            </span>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         UNIVERSAL N BUTTON
+    ====================================== -->
+
+    <button
+        id="nexvoGlobalButton"
+        class="nexvo-global-button"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+    >
+
+        <span>
+            N
+        </span>
+
+    </button>
+
+
+
+    <!-- =====================================
+         N BUTTON OVERLAY
+    ====================================== -->
+
+    <div
+        id="nexvoGlobalOverlay"
+        class="nexvo-global-overlay"
+    ></div>
+
+
+
+    <!-- =====================================
+         N BUTTON MENU
+    ====================================== -->
+
+    <div
+        id="nexvoGlobalMenu"
+        class="nexvo-global-menu"
+        aria-hidden="true"
+    >
+
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        What would you like to do?
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="nexvoMenuClose"
+                class="nexvo-menu-close"
+                type="button"
+                aria-label="Close NEXVO menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <div class="nexvo-menu-actions">
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with someone on NEXVO
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    🌐
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build your NEXVO community
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    📞
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make Call
+                    </strong>
+
+                    <small>
+                        Start a NEXVO call
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         DATA
+    ====================================== -->
+
+    <script src="../data/nexvo-data.js"></script>
+
+
+    <!-- =====================================
+         N BUTTON
+    ====================================== -->
+
+    <script src="../js/nexvo-plus.js"></script>
+
+
+    <!-- =====================================
+         SETTINGS
+    ====================================== -->
+
+    <script src="../js/settings.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Calls</title>
+
+
+    <link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/calls.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/nexvo-plus.css"
+>
+
+</head>
+
+
+<body>
+
+
+    <main class="calls-page">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="calls-header">
+
+            <div class="calls-header-left">
+
+                <button
+                    class="back-button"
+                    id="callsBackButton"
+                    type="button"
+                    aria-label="Go back"
+                >
+                    ←
+                </button>
+
+                <div>
+
+                    <h1>Calls</h1>
+
+                    <p>
+                        Voice and video communication
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             MY NEXVO ID
+        ====================================== -->
+
+        <section class="my-nexvo-card">
+
+            <div class="my-nexvo-icon">
+                N
+            </div>
+
+
+            <div class="my-nexvo-info">
+
+                <span class="my-nexvo-label">
+                    Your NEXVO ID
+                </span>
+
+                <strong
+                    id="myNexvoId"
+                >
+                    Loading...
+                </strong>
+
+                <small>
+                    Share this ID with another NEXVO user
+                    so they can call you.
+                </small>
+
+            </div>
+
+
+            <button
+                id="copyNexvoIdButton"
+                class="copy-nexvo-button"
+                type="button"
+                aria-label="Copy NEXVO ID"
+            >
+                Copy
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CALL TYPE
+        ====================================== -->
+
+        <section class="call-type-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Start a call
+                </h2>
+
+                <p>
+                    Choose how you want to communicate.
+                </p>
+
+            </div>
+
+
+            <div class="call-mode">
+
+                <button
+                    id="audioModeButton"
+                    class="call-mode-button active"
+                    type="button"
+                >
+
+                    <span class="mode-icon">
+                        ☎
+                    </span>
+
+                    <span>
+                        Audio
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="videoModeButton"
+                    class="call-mode-button"
+                    type="button"
+                >
+
+                    <span class="mode-icon">
+                        ▣
+                    </span>
+
+                    <span>
+                        Video
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div class="call-target">
+
+                <label
+                    for="nexvoIdInput"
+                >
+                    NEXVO ID
+                </label>
+
+
+                <div class="target-input-row">
+
+                    <input
+                        id="nexvoIdInput"
+                        type="text"
+                        placeholder="Enter NV-XXXXXXXX"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+
+                    <button
+                        id="startCallButton"
+                        class="start-call-button"
+                        type="button"
+                    >
+                        Call
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="callTargetStatus"
+                    class="call-target-status"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RECENT CALLS
+        ====================================== -->
+
+        <section class="recent-calls-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Recent calls
+                </h2>
+
+                <p>
+                    Your recent NEXVO calls will appear here.
+                </p>
+
+            </div>
+
+
+            <div
+                id="recentCallsList"
+                class="recent-calls-list"
+            ></div>
+
+
+            <div
+                id="callsEmptyState"
+                class="calls-empty-state"
+            >
+
+                <div class="empty-icon">
+                    ☎
+                </div>
+
+                <h3>
+                    No recent calls
+                </h3>
+
+                <p>
+                    Your call history will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         DIAL PAD BUTTON
+    ====================================== -->
+
+    <button
+        id="dialPadButton"
+        class="dial-pad-floating-button"
+        type="button"
+        aria-label="Open dial pad"
+        aria-expanded="false"
+    >
+        ⌨
+    </button>
+
+
+
+    <!-- =====================================
+         DIAL PAD
+    ====================================== -->
+
+    <section
+        id="dialPad"
+        class="dial-pad"
+        inert
+    >
+
+        <div class="dial-pad-header">
+
+            <div>
+
+                <strong>
+                    Dial pad
+                </strong>
+
+                <small>
+                    Enter a NEXVO ID
+                </small>
+
+            </div>
+
+
+            <button
+                id="dialPadClose"
+                class="dial-pad-close"
+                type="button"
+                aria-label="Close dial pad"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="dial-display">
+
+            <span id="dialNumber">
+                —
+            </span>
+
+
+            <button
+                id="dialDelete"
+                class="dial-delete"
+                type="button"
+                aria-label="Delete"
+            >
+                ⌫
+            </button>
+
+        </div>
+
+
+        <div class="dial-grid">
+
+            <button
+                class="dial-key"
+                data-digit="1"
+                type="button"
+            >
+                1
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="2"
+                type="button"
+            >
+                2
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="3"
+                type="button"
+            >
+                3
+            </button>
+
+
+            <button
+                class="dial-key"
+                data-digit="4"
+                type="button"
+            >
+                4
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="5"
+                type="button"
+            >
+                5
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="6"
+                type="button"
+            >
+                6
+            </button>
+
+
+            <button
+                class="dial-key"
+                data-digit="7"
+                type="button"
+            >
+                7
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="8"
+                type="button"
+            >
+                8
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="9"
+                type="button"
+            >
+                9
+            </button>
+
+
+            <button
+                class="dial-key"
+                data-digit="N"
+                type="button"
+            >
+                N
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="0"
+                type="button"
+            >
+                0
+            </button>
+
+            <button
+                class="dial-key"
+                data-digit="-"
+                type="button"
+            >
+                −
+            </button>
+
+        </div>
+
+
+        <button
+            id="dialCallButton"
+            class="dial-call-button"
+            type="button"
+        >
+            Call
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         UNIVERSAL N BUTTON
+    ====================================== -->
+
+    <button
+        class="nexvo-global-button"
+        id="nexvoGlobalButton"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+    >
+
+        <span>
+            N
+        </span>
+
+    </button>
+
+
+    <div
+        class="nexvo-global-overlay"
+        id="nexvoGlobalOverlay"
+    ></div>
+
+
+    <section
+        class="nexvo-global-menu"
+        id="nexvoGlobalMenu"
+        aria-label="NEXVO menu"
+    >
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        Quick actions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="nexvo-menu-close"
+                id="nexvoMenuClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="nexvo-menu-actions">
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with another person
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    ◎
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build a community
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    ☎
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make a Call
+                    </strong>
+
+                    <small>
+                        Start an audio or video call
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FIREBASE
+    ====================================== -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+<script src="../js/nexvo-identity.js"></script>
+<script src="../js/firebase-init.js"></script>
+
+<script src="../data/nexvo-data.js"></script>
+<script src="../js/navigation.js"></script>
+
+<script src="../js/call-signaling.js"></script>
+<script src="../js/nexvo-plus.js"></script>
+<script src="../js/calls.js"></script>
+
+</body>
+
+</html>

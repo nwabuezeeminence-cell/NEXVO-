@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/home.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="home-page">
+
+
+    <!-- =====================================
+         TOP BAR
+    ====================================== -->
+
+    <header class="home-header">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                N
+            </div>
+
+            <div>
+
+                <h1>
+                    NEXVO
+                </h1>
+
+                <span>
+                    Connect & communicate
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="home-header-actions">
+
+    <!-- VIDEO -->
+
+    <button
+        id="videoButton"
+        class="video-button"
+        type="button"
+        aria-label="Open NEXVO Videos"
+    >
+
+        <span>
+            ▶
+        </span>
+
+    </button>
+
+
+    <!-- PROFILE -->
+
+    <button
+        id="profileButton"
+        class="profile-button"
+        type="button"
+        aria-label="Open profile"
+    >
+
+        <span id="homeAvatar">
+            👤
+        </span>
+
+    </button>
+
+</div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         SEARCH
+    ====================================== -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Search NEXVO..."
+                autocomplete="off"
+            >
+
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SEARCH RESULTS
+    ====================================== -->
+
+    <section
+        id="searchResults"
+        class="search-results"
+    ></section>
+
+
+
+    <!-- =====================================
+         CONVERSATIONS
+    ====================================== -->
+
+    <section
+        id="conversationSection"
+        class="conversation-section"
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Messages
+            </h2>
+
+        </div>
+
+
+        <div
+            id="conversationList"
+            class="conversation-list"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         EMPTY STATE
+    ====================================== -->
+
+    <section
+        id="emptyState"
+        class="empty-state"
+    >
+
+        <div class="empty-orbit">
+
+            <div class="empty-icon">
+                N
+            </div>
+
+        </div>
+
+
+        <h2>
+            Your conversations will appear here
+        </h2>
+
+
+        <p>
+            Add people or start a conversation
+            to begin connecting on NEXVO.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PLUS BUTTON
+    ====================================== -->
+
+    <button
+        id="plusButton"
+        class="plus-button"
+        type="button"
+        aria-label="Add"
+    >
+
+        <span>
+            +
+        </span>
+
+    </button>
+
+
+
+    <!-- =====================================
+         PLUS MENU
+    ====================================== -->
+
+    <div
+        id="plusBackdrop"
+        class="plus-backdrop"
+    ></div>
+
+
+    <section
+        id="plusMenu"
+        class="plus-menu"
+        aria-hidden="true"
+    >
+
+        <div class="plus-menu-header">
+
+            <div>
+
+                <h2>
+                    Add
+                </h2>
+
+                <p>
+                    What would you like to do?
+                </p>
+
+            </div>
+
+
+            <button
+                id="closePlusMenu"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <div class="add-actions">
+
+
+            <!-- ADD FRIEND -->
+
+            <button
+                class="add-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="action-icon">
+                    ♡
+                </span>
+
+                <span>
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with a NEXVO member
+                    </small>
+
+                </span>
+
+                <b>
+                    ›
+                </b>
+
+            </button>
+
+
+
+            <!-- SCAN QR -->
+
+            <button
+                class="add-action"
+                data-action="scan"
+                type="button"
+            >
+
+                <span class="action-icon">
+                    ▦
+                </span>
+
+                <span>
+
+                    <strong>
+                        Scan NEXVO QR
+                    </strong>
+
+                    <small>
+                        Connect by scanning a QR code
+                    </small>
+
+                </span>
+
+                <b>
+                    ›
+                </b>
+
+            </button>
+
+
+
+            <!-- CREATE GROUP -->
+
+            <button
+                class="add-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="action-icon">
+                    ◎
+                </span>
+
+                <span>
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Bring people together
+                    </small>
+
+                </span>
+
+                <b>
+                    ›
+                </b>
+
+            </button>
+
+
+
+            <!-- COMMUNITY -->
+
+            <button
+                class="add-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="action-icon">
+                    ◇
+                </span>
+
+                <span>
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build a shared space
+                    </small>
+
+                </span>
+
+                <b>
+                    ›
+                </b>
+
+            </button>
+
+
+
+            <!-- CALL -->
+
+            <button
+                class="add-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="action-icon">
+                    ◌
+                </span>
+
+                <span>
+
+                    <strong>
+                        Start Call
+                    </strong>
+
+                    <small>
+                        Start a voice or video call
+                    </small>
+
+                </span>
+
+                <b>
+                    ›
+                </b>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+</main>
+
+
+
+<script src="../data/identity.js"></script>
+
+<script src="../data/friends.js"></script>
+
+<script src="../js/home.js"></script>
+
+</body>
+
+</html>

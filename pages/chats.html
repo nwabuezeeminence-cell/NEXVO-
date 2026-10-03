@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Chats</title>
+
+
+    <!-- =====================================
+         GLOBAL CSS
+    ====================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================
+         UNIVERSAL N BUTTON CSS
+    ====================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+
+    <!-- =====================================
+         CHAT CSS
+    ====================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/chats.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         CHATS PAGE
+    ====================================== -->
+
+    <main class="chats-page">
+
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="chats-header">
+
+            <div>
+
+                <span class="page-label">
+                    NEXVO
+                </span>
+
+                <h1>
+                    Chats
+                </h1>
+
+            </div>
+
+
+            <button
+                class="header-icon"
+                id="chatSearchButton"
+                type="button"
+                aria-label="Search chats"
+            >
+
+                🔍
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =================================
+             SEARCH
+        ================================== -->
+
+        <div class="chat-search-box">
+
+            <span>
+                🔍
+            </span>
+
+            <input
+                type="search"
+                id="chatSearchInput"
+                placeholder="Search conversations"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- =================================
+             CHAT LIST
+        ================================== -->
+
+        <section
+            class="chat-list"
+            id="chatList"
+        >
+
+            <!-- Chats are rendered by chats.js -->
+
+        </section>
+
+
+
+        <!-- =================================
+             EMPTY STATE
+        ================================== -->
+
+        <section
+            class="chat-empty"
+            id="chatEmpty"
+        >
+
+            <div class="empty-icon">
+                💬
+            </div>
+
+            <h2>
+                No chats yet
+            </h2>
+
+            <p>
+                Start a conversation with a friend
+                using the N button.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         SCRIPTS
+    ====================================== -->
+
+    <!-- NEXVO DATA -->
+
+    <script
+        src="../data/nexvo-data.js"
+    ></script>
+
+
+    <!-- UNIVERSAL N BUTTON -->
+
+    <script
+        src="../js/nexvo-plus.js"
+    ></script>
+
+
+    <!-- CHATS PAGE LOGIC -->
+
+    <script
+        src="../js/chats.js"
+    ></script>
+
+
+</body>
+
+</html>

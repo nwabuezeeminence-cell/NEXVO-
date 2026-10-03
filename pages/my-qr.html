@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • My QR</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/my-qr.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="my-qr-page">
+
+
+    <!-- HEADER -->
+
+    <header class="qr-header">
+
+        <button
+            id="backButton"
+            type="button"
+            class="qr-back"
+        >
+            ‹
+        </button>
+
+
+        <div>
+
+            <h1>
+                My NEXVO QR
+            </h1>
+
+            <p>
+                Let people connect with you
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PROFILE -->
+
+    <section class="qr-profile">
+
+        <div
+            id="qrAvatar"
+            class="qr-avatar"
+        >
+            👤
+        </div>
+
+
+        <h2 id="qrName">
+            NEXVO Member
+        </h2>
+
+
+        <p id="qrUsername">
+            @username
+        </p>
+
+    </section>
+
+
+
+    <!-- QR -->
+
+    <section class="qr-card">
+
+        <div
+            id="realQRCode"
+            class="real-qr"
+        ></div>
+
+
+        <p class="qr-id-label">
+            NEXVO ID
+        </p>
+
+
+        <strong id="qrNexvoId">
+            —
+        </strong>
+
+    </section>
+
+
+
+    <!-- INSTRUCTIONS -->
+
+    <section class="qr-instructions">
+
+        <h3>
+            Connect with someone
+        </h3>
+
+        <p>
+            Let another NEXVO member scan
+            this code to find your profile
+            and send you a connection request.
+        </p>
+
+    </section>
+
+
+
+    <!-- ACTIONS -->
+
+    <section class="qr-actions">
+
+        <button
+            id="shareQRButton"
+            type="button"
+        >
+            Share
+        </button>
+
+
+        <button
+            id="refreshQRButton"
+            type="button"
+        >
+            Refresh
+        </button>
+
+    </section>            </div></div>
+</main>
+
+
+<script src="../data/identity.js"></script>
+
+<script src="../data/qr-system.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script src="../js/my-qr.js"></script>
+
+</body>
+
+</html>

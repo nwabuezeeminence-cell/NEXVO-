@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Watch</title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/watch.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="watch-page">
+
+
+    <!-- =====================================
+         WATCH HEADER
+    ====================================== -->
+
+    <header class="watch-header">
+
+        <div class="watch-header-left">
+
+            <button
+                id="watchBackButton"
+                class="watch-back-button"
+                type="button"
+                aria-label="Go back"
+            >
+                ←
+            </button>
+
+
+            <div class="watch-brand">
+
+                <div class="watch-brand-icon">
+                    ▶
+                </div>
+
+                <div>
+
+                    <h1>
+                        Watch
+                    </h1>
+
+                    <span>
+                        Discover videos on NEXVO
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="watchSearchButton"
+            class="watch-header-button"
+            type="button"
+            aria-label="Search videos"
+        >
+            ⌕
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================
+         VIDEO SEARCH
+    ====================================== -->
+
+    <section
+        id="watchSearchSection"
+        class="watch-search-section"
+    >
+
+        <div class="watch-search-box">
+
+            <span>
+                ⌕
+            </span>
+
+            <input
+                id="watchSearchInput"
+                type="search"
+                placeholder="Search videos..."
+                autocomplete="off"
+            >
+
+            <button
+                id="watchClearSearch"
+                type="button"
+                aria-label="Clear search"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         WATCH TABS
+    ====================================== -->
+
+    <nav
+        class="watch-tabs"
+        aria-label="Video categories"
+    >
+
+        <button
+            class="watch-tab active"
+            data-tab="for-you"
+            type="button"
+        >
+            For You
+        </button>
+
+
+        <button
+            class="watch-tab"
+            data-tab="following"
+            type="button"
+        >
+            Following
+        </button>
+
+
+        <button
+            class="watch-tab"
+            data-tab="friends"
+            type="button"
+        >
+            Friends
+        </button>
+
+
+        <button
+            class="watch-tab"
+            data-tab="communities"
+            type="button"
+        >
+            Communities
+        </button>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         VIDEO CONTENT
+    ====================================== -->
+
+    <section
+        id="watchVideoList"
+        class="watch-video-list"
+    ></section>
+
+
+
+    <!-- =====================================
+         EMPTY STATE
+    ====================================== -->
+
+    <section
+        id="watchEmptyState"
+        class="watch-empty-state"
+    >
+
+        <div class="watch-empty-icon">
+            ▶
+        </div>
+
+
+        <h2>
+            Nothing to watch yet
+        </h2>
+
+
+        <p>
+            Videos from creators, friends and
+            communities will appear here.
+        </p>
+
+
+        <button
+            id="watchUploadButton"
+            class="watch-upload-button"
+            type="button"
+        >
+            Upload a video
+        </button>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     UNIVERSAL N BUTTON
+====================================== -->
+
+<button
+    class="nexvo-global-button"
+    id="nexvoGlobalButton"
+    type="button"
+    aria-label="Open NEXVO menu"
+    aria-expanded="false"
+>
+
+    <span>
+        N
+    </span>
+
+</button>
+
+
+<div
+    class="nexvo-global-overlay"
+    id="nexvoGlobalOverlay"
+></div>
+
+
+<section
+    class="nexvo-global-menu"
+    id="nexvoGlobalMenu"
+    aria-label="NEXVO menu"
+>
+
+    <div class="nexvo-menu-header">
+
+        <div class="nexvo-menu-title">
+
+            <div class="nexvo-menu-logo">
+                N
+            </div>
+
+            <div>
+
+                <strong>
+                    NEXVO
+                </strong>
+
+                <span>
+                    Quick actions
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="nexvo-menu-close"
+            id="nexvoMenuClose"
+            type="button"
+            aria-label="Close menu"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="nexvo-menu-actions">
+
+        <button
+            class="nexvo-menu-action"
+            data-action="friend"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                👤
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Add Friend
+                </strong>
+
+                <small>
+                    Connect with another person
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="group"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                👥
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Create Group
+                </strong>
+
+                <small>
+                    Start a group conversation
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="community"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                ◎
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Create Community
+                </strong>
+
+                <small>
+                    Build a community
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+
+        <button
+            class="nexvo-menu-action"
+            data-action="call"
+            type="button"
+        >
+
+            <span class="nexvo-action-icon">
+                ☎
+            </span>
+
+            <span class="nexvo-action-text">
+
+                <strong>
+                    Make a Call
+                </strong>
+
+                <small>
+                    Start an audio or video call
+                </small>
+
+            </span>
+
+            <span class="nexvo-action-arrow">
+                ›
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="../js/nexvo-plus.js"></script>
+
+<script src="../js/watch.js"></script>
+
+
+</body>
+
+</html>

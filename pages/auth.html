@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <meta
+        name="description"
+        content="Join NEXVO — Connect. Express. Belong."
+    >
+
+    <title>NEXVO — Account</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/auth.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="auth-app">
+
+        <!-- =================================
+             BACKGROUND
+        ================================= -->
+
+        <div class="auth-glow auth-glow-pink"></div>
+
+        <div class="auth-glow auth-glow-red"></div>
+
+
+        <!-- =================================
+             HEADER
+        ================================= -->
+
+        <header class="auth-header">
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+                aria-label="Go back"
+            >
+                ←
+            </button>
+
+
+            <div class="auth-brand">
+
+                <div class="auth-logo">
+                    N
+                </div>
+
+                <span>
+                    NEXVO
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================
+             MAIN
+        ================================= -->
+
+        <section class="auth-content">
+
+
+            <!-- =================================
+                 WELCOME
+            ================================= -->
+
+            <div
+                id="authWelcome"
+                class="auth-view active"
+            >
+
+                <div class="welcome-symbol">
+
+                    <div class="welcome-symbol-inner">
+                        N
+                    </div>
+
+                </div>
+
+
+                <span class="auth-eyebrow">
+                    WELCOME TO NEXVO
+                </span>
+
+
+                <h1>
+                    Connect.<br>
+                    Express.<br>
+                    Belong.
+                </h1>
+
+
+                <p>
+                    Create your NEXVO account and
+                    start building your world of
+                    connections.
+                </p>
+
+
+                <div class="auth-actions">
+
+                    <button
+                        id="createAccountButton"
+                        class="primary-auth-button"
+                        type="button"
+                    >
+                        <span>
+                            Create Account
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+                    </button>
+
+
+                    <button
+                        id="loginButton"
+                        class="secondary-auth-button"
+                        type="button"
+                    >
+                        I already have an account
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CREATE ACCOUNT
+            ================================= -->
+
+            <div
+                id="signupView"
+                class="auth-view"
+            >
+
+                <div class="form-heading">
+
+                    <span class="auth-eyebrow">
+                        CREATE ACCOUNT
+                    </span>
+
+                    <h1>
+                        Welcome to<br>
+                        NEXVO.
+                    </h1>
+
+                    <p>
+                        Your account first.
+                        Your profile can come later.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="signupForm"
+                    class="auth-form"
+                >
+
+                    <div class="input-group">
+
+                        <label for="signupName">
+                            Your name
+                        </label>
+
+                        <input
+                            id="signupName"
+                            type="text"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="signupContact">
+                            Email or phone number
+                        </label>
+
+                        <input
+                            id="signupContact"
+                            type="text"
+                            placeholder="Email or phone number"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                id="signupPassword"
+                                type="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="signupPassword"
+                                aria-label="Show password"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        id="signupMessage"
+                        class="form-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="primary-auth-button"
+                    >
+
+                        <span>
+                            Create Account
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <p class="form-bottom-text">
+
+                    Already a member?
+
+                    <button
+                        id="switchToLogin"
+                        type="button"
+                    >
+                        Log in
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 LOGIN
+            ================================= -->
+
+            <div
+                id="loginView"
+                class="auth-view"
+            >
+
+                <div class="form-heading">
+
+                    <span class="auth-eyebrow">
+                        WELCOME BACK
+                    </span>
+
+                    <h1>
+                        Log in to<br>
+                        NEXVO.
+                    </h1>
+
+                    <p>
+                        Your conversations are
+                        waiting for you.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                >
+
+                    <div class="input-group">
+
+                        <label for="loginContact">
+                            Email or phone number
+                        </label>
+
+                        <input
+                            id="loginContact"
+                            type="text"
+                            placeholder="Email or phone number"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                id="loginPassword"
+                                type="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword"
+                                aria-label="Show password"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="forgotPasswordButton"
+                        class="forgot-password"
+                    >
+                        Forgot password?
+                    </button>
+
+
+                    <p
+                        id="loginMessage"
+                        class="form-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="primary-auth-button"
+                    >
+
+                        <span>
+                            Log In
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <p class="form-bottom-text">
+
+                    New to NEXVO?
+
+                    <button
+                        id="switchToSignup"
+                        type="button"
+                    >
+                        Create account
+                    </button>
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================
+             FOOTER
+        ================================= -->
+
+        <footer class="auth-footer">
+
+            <span>
+                NEXVO
+            </span>
+
+            <span>
+                Connect. Express. Belong.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="../js/config.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+</body>
+
+</html>

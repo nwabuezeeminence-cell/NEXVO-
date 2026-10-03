@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Add Friend</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/add-friend.css"
+    >
+    
+    <link
+        rel="stylesheet"
+        href="../css/nexvo-plus.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="add-friend-page">
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header class="add-friend-header">
+
+            <button
+                id="backButton"
+                class="add-friend-back"
+                type="button"
+                aria-label="Go back"
+            >
+                ‹
+            </button>
+
+            <div class="add-friend-header-text">
+
+                <span class="page-label">
+                    NEXVO
+                </span>
+
+                <h1>
+                    Add Friend
+                </h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             INTRO
+        ========================================== -->
+
+        <section class="add-friend-intro">
+
+            <div class="intro-icon">
+                👤
+            </div>
+
+            <div>
+
+                <h2>
+                    Connect with people
+                </h2>
+
+                <p>
+                    Find friends and connect with them on NEXVO.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             METHOD SELECTOR
+        ========================================== -->
+
+        <section class="friend-methods">
+
+            <button
+                class="friend-method active"
+                data-panel="searchPanel"
+                type="button"
+            >
+
+                <span class="method-icon">
+                    🔎
+                </span>
+
+                <span class="method-text">
+
+                    <strong>
+                        Search
+                    </strong>
+
+                    <small>
+                        Find by name
+                    </small>
+
+                </span>
+
+                <span class="method-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="friend-method"
+                data-panel="usernamePanel"
+                type="button"
+            >
+
+                <span class="method-icon">
+                    @
+                </span>
+
+                <span class="method-text">
+
+                    <strong>
+                        NEXVO Username
+                    </strong>
+
+                    <small>
+                        Find someone by username
+                    </small>
+
+                </span>
+
+                <span class="method-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="friend-method"
+                data-panel="scanPanel"
+                type="button"
+            >
+
+                <span class="method-icon">
+                    ▣
+                </span>
+
+                <span class="method-text">
+
+                    <strong>
+                        Scan NEXVO Code
+                    </strong>
+
+                    <small>
+                        Scan a friend's code
+                    </small>
+
+                </span>
+
+                <span class="method-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="friend-method"
+                data-panel="myCodePanel"
+                type="button"
+            >
+
+                <span class="method-icon">
+                    ◫
+                </span>
+
+                <span class="method-text">
+
+                    <strong>
+                        My NEXVO Code
+                    </strong>
+
+                    <small>
+                        Show your personal code
+                    </small>
+
+                </span>
+
+                <span class="method-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- =========================================
+             SEARCH PANEL
+        ========================================== -->
+
+        <section
+            id="searchPanel"
+            class="friend-panel active"
+        >
+
+            <div class="panel-heading">
+
+                <h2>
+                    Search by name
+                </h2>
+
+                <p>
+                    Enter a person's name to find them.
+                </p>
+
+            </div>
+
+            <div class="friend-search-box">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    id="nameSearchInput"
+                    type="search"
+                    placeholder="Search by name..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clearNameSearch"
+                    type="button"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                id="nameSearchResults"
+                class="friend-search-results"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================================
+             USERNAME PANEL
+        ========================================== -->
+
+        <section
+            id="usernamePanel"
+            class="friend-panel"
+        >
+
+            <div class="panel-heading">
+
+                <h2>
+                    Search by username
+                </h2>
+
+                <p>
+                    Find someone using their NEXVO username.
+                </p>
+
+            </div>
+
+            <div class="friend-search-box">
+
+                <span>
+                    @
+                </span>
+
+                <input
+                    id="usernameSearchInput"
+                    type="search"
+                    placeholder="@username"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clearUsernameSearch"
+                    type="button"
+                    aria-label="Clear username search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                id="usernameSearchResults"
+                class="friend-search-results"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================================
+             SCAN PANEL
+        ========================================== -->
+
+        <section
+            id="scanPanel"
+            class="friend-panel"
+        >
+
+            <div class="panel-heading">
+
+                <h2>
+                    Scan NEXVO Code
+                </h2>
+
+                <p>
+                    Point your camera at a NEXVO Code.
+                </p>
+
+            </div>
+
+            <div class="scanner-card">
+
+                <div class="scanner-frame">
+
+                    <div class="scanner-corner top-left"></div>
+                    <div class="scanner-corner top-right"></div>
+                    <div class="scanner-corner bottom-left"></div>
+                    <div class="scanner-corner bottom-right"></div>
+
+                    <div class="scanner-line"></div>
+
+                    <span class="scanner-icon">
+                        ▣
+                    </span>
+
+                </div>
+
+                <p>
+                    Camera scanning will be connected next.
+                </p>
+
+                <button
+                    id="startScanner"
+                    class="primary-action"
+                    type="button"
+                >
+                    Open Scanner
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MY CODE PANEL
+        ========================================== -->
+
+        <section
+            id="myCodePanel"
+            class="friend-panel"
+        >
+
+            <div class="panel-heading">
+
+                <h2>
+                    My NEXVO Code
+                </h2>
+
+                <p>
+                    Let friends scan this code to connect with you.
+                </p>
+
+            </div>
+
+            <div class="my-code-card">
+
+                <div
+                    id="myCode"
+                    class="nexvo-code"
+                    aria-label="Your NEXVO Code"
+                >
+                    NEXVO
+                </div>
+
+                <div class="my-code-info">
+
+                    <strong id="myCodeName">
+                        NEXVO User
+                    </strong>
+
+                    <span id="myCodeUsername">
+                        @username
+                    </span>
+
+                </div>
+
+                <button
+                    id="copyCodeButton"
+                    class="secondary-action"
+                    type="button"
+                >
+                    Copy NEXVO Code
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         NEXVO GLOBAL N BUTTON
+    ========================================== -->
+
+    <button
+        class="nexvo-global-button"
+        id="nexvoGlobalButton"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+        aria-controls="nexvoGlobalMenu"
+    >
+        <span>N</span>
+    </button>
+
+
+    <div
+        class="nexvo-global-overlay"
+        id="nexvoGlobalOverlay"
+    ></div>
+
+
+    <div
+        class="nexvo-global-menu"
+        id="nexvoGlobalMenu"
+        aria-hidden="true"
+    >
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        Quick actions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="nexvo-menu-close"
+                id="nexvoMenuClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="nexvo-menu-actions">
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with someone new
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    🌐
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build your NEXVO community
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    📞
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make Call
+                    </strong>
+
+                    <small>
+                        Start a NEXVO call
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="../data/nexvo-data.js"></script>
+
+    <script src="../js/nexvo-plus.js"></script>
+
+    <script src="../js/add-friend.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Incoming Call</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/incoming-call.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="incoming-call-page">
+
+        <div class="incoming-security">
+            🔒 NEXVO CALL
+        </div>
+
+
+        <section class="incoming-main">
+
+            <div
+                id="incomingAvatar"
+                class="incoming-avatar"
+            >
+                👤
+            </div>
+
+            <p class="incoming-label">
+                INCOMING CALL
+            </p>
+
+            <h1 id="incomingName">
+                NEXVO Member
+            </h1>
+
+            <p id="incomingType">
+                Audio call
+            </p>
+
+            <div class="incoming-ringing">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <section class="incoming-actions">
+
+            <button
+                id="declineCallButton"
+                class="incoming-action decline"
+                type="button"
+            >
+                <span>📞</span>
+                <strong>Decline</strong>
+            </button>
+
+
+            <button
+                id="acceptCallButton"
+                class="incoming-action accept"
+                type="button"
+            >
+                <span>📞</span>
+                <strong>Accept</strong>
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+
+<script src="../js/nexvo-identity.js"></script>
+
+<script src="../js/firebase-init.js"></script>
+
+<script src="../js/call-signaling.js"></script>
+
+<script src="../js/webrtc-call.js"></script>
+
+<script src="../js/incoming-call.js"></script>
+</body>
+
+</html>

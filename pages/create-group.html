@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Create Group</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/create-group.css"
+    >
+    <link rel="stylesheet" href="../css/nexvo-plus.css">
+
+</head>
+
+
+<body>
+
+    <main class="create-group-page">
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header class="create-group-header">
+
+            <button
+                id="backButton"
+                class="create-group-back"
+                type="button"
+                aria-label="Go back"
+            >
+                ‹
+            </button>
+
+            <div>
+
+                <span class="page-label">
+                    NEXVO
+                </span>
+
+                <h1>
+                    Create Group
+                </h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             GROUP PREVIEW
+        ========================================== -->
+
+        <section class="group-preview">
+
+            <button
+                id="groupPhotoButton"
+                class="group-photo"
+                type="button"
+                aria-label="Choose group photo"
+            >
+                <span id="groupPhotoIcon">
+                    👥
+                </span>
+
+                <span class="photo-camera">
+                    📷
+                </span>
+            </button>
+
+            <div>
+
+                <h2 id="previewGroupName">
+                    New Group
+                </h2>
+
+                <p id="previewMemberCount">
+                    0 members selected
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             GROUP DETAILS
+        ========================================== -->
+
+        <section class="group-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Group details
+                </h2>
+
+                <p>
+                    Give your group a name and description.
+                </p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="groupName">
+                    Group name
+                </label>
+
+                <input
+                    id="groupName"
+                    type="text"
+                    maxlength="50"
+                    placeholder="Enter group name"
+                    autocomplete="off"
+                >
+
+                <small id="groupNameCount">
+                    0 / 50
+                </small>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="groupDescription">
+                    Description
+                    <span>Optional</span>
+                </label>
+
+                <textarea
+                    id="groupDescription"
+                    maxlength="160"
+                    rows="4"
+                    placeholder="What is this group about?"
+                ></textarea>
+
+                <small id="descriptionCount">
+                    0 / 160
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MEMBERS
+        ========================================== -->
+
+        <section class="group-section">
+
+            <div class="section-heading member-heading">
+
+                <div>
+
+                    <h2>
+                        Add members
+                    </h2>
+
+                    <p>
+                        Choose friends to add to the group.
+                    </p>
+
+                </div>
+
+                <strong id="selectedCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="member-search">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    id="memberSearchInput"
+                    type="search"
+                    placeholder="Search friends..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clearMemberSearch"
+                    type="button"
+                    aria-label="Clear member search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="membersList"
+                class="members-list"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================================
+             CREATE BUTTON
+        ========================================== -->
+
+        <button
+            id="createGroupButton"
+            class="create-group-button"
+            type="button"
+        >
+            Create Group
+        </button>
+
+    </main>
+
+
+    <!-- =========================================
+         GROUP PHOTO MESSAGE
+    ========================================== -->
+
+    <div
+        id="photoMessage"
+        class="group-message"
+        aria-hidden="true"
+    >
+
+        <div class="message-card">
+
+            <div class="message-icon">
+                📷
+            </div>
+
+            <h3>
+                Group photo
+            </h3>
+
+            <p>
+                Group photo selection will be connected next.
+            </p>
+
+            <button
+                id="closePhotoMessage"
+                type="button"
+            >
+                Got it
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         NEXVO GLOBAL N BUTTON
+    ========================================== -->
+
+    <button
+        class="nexvo-global-button"
+        id="nexvoGlobalButton"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+        aria-controls="nexvoGlobalMenu"
+    >
+        <span>N</span>
+    </button>
+
+
+    <div
+        class="nexvo-global-overlay"
+        id="nexvoGlobalOverlay"
+    ></div>
+
+
+    <div
+        class="nexvo-global-menu"
+        id="nexvoGlobalMenu"
+        aria-hidden="true"
+    >
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        Quick actions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="nexvo-menu-close"
+                id="nexvoMenuClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="nexvo-menu-actions">
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with someone new
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    🌐
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build your NEXVO community
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    📞
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make Call
+                    </strong>
+
+                    <small>
+                        Start a NEXVO call
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="../data/nexvo-data.js"></script>
+
+    <script src="../js/nexvo-plus.js"></script>
+
+    <script src="../js/create-group.js"></script>
+
+</body>
+
+</html>

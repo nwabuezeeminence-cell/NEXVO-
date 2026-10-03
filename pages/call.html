@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Call</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/call.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="call-page" id="callPage">
+
+
+    <!-- =================================
+         VIDEO AREA
+    ================================== -->
+
+    <section
+        class="call-video-area"
+        id="callVideoArea"
+    >
+
+        <video
+            id="remoteVideo"
+            class="remote-video"
+            autoplay
+            playsinline
+        ></video>
+
+
+        <div
+            id="remoteVideoPlaceholder"
+            class="remote-video-placeholder"
+        >
+
+            <div class="call-avatar-large">
+                👤
+            </div>
+
+            <strong id="callContact">
+                NEXVO Member
+            </strong>
+
+        </div>
+
+
+        <video
+            id="localVideo"
+            class="local-video"
+            autoplay
+            muted
+            playsinline
+        ></video>
+
+    </section>
+
+
+    <!-- =================================
+         TOP BAR
+    ================================== -->
+
+    <header class="call-header">
+
+        <button
+            id="callBackButton"
+            class="call-header-button"
+            type="button"
+            aria-label="Back"
+        >
+            ‹
+        </button>
+
+
+        <div class="call-header-center">
+
+            <span class="call-header-title">
+                NEXVO CALL
+            </span>
+
+            <span
+                id="callSecurity"
+                class="call-security"
+            >
+                🔒 Secure
+            </span>
+
+        </div>
+
+
+        <button
+            id="callMoreButton"
+            class="call-header-button"
+            type="button"
+            aria-label="Call options"
+        >
+            ⋮
+        </button>
+
+    </header>
+
+
+    <!-- =================================
+         CALL INFORMATION
+    ================================== -->
+
+    <section class="call-information">
+
+        <h1 id="callName">
+            NEXVO Member
+        </h1>
+
+        <p id="callNumber">
+            Connecting...
+        </p>
+
+        <div
+            id="callState"
+            class="call-state"
+        >
+            Calling
+        </div>
+
+        <div
+            id="callTimer"
+            class="call-timer"
+        >
+            00:00
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         CALL OPTIONS MENU
+    ================================== -->
+
+    <section
+        id="callOptions"
+        class="call-options"
+        hidden
+    >
+
+        <button
+            id="addCallButton"
+            type="button"
+        >
+            <span>＋</span>
+            <span>
+                <strong>Add call</strong>
+                <small>Add another person</small>
+            </span>
+        </button>
+
+
+        <button
+            id="callSettingsButton"
+            type="button"
+        >
+            <span>⚙️</span>
+            <span>
+                <strong>Call settings</strong>
+                <small>Audio and call options</small>
+            </span>
+        </button>
+
+    </section>
+
+
+    <!-- =================================
+         CONTROL BUTTONS
+    ================================== -->
+
+    <section class="call-controls">
+
+
+        <button
+            id="muteButton"
+            class="call-control"
+            type="button"
+            aria-pressed="false"
+        >
+
+            <span class="control-icon">
+                🎙️
+            </span>
+
+            <span>
+                Mute
+            </span>
+
+        </button>
+
+
+        <button
+            id="speakerButton"
+            class="call-control"
+            type="button"
+            aria-pressed="false"
+        >
+
+            <span class="control-icon">
+                🔊
+            </span>
+
+            <span>
+                Speaker
+            </span>
+
+        </button>
+
+
+        <button
+            id="recordButton"
+            class="call-control"
+            type="button"
+            aria-pressed="false"
+        >
+
+            <span class="control-icon">
+                ⏺️
+            </span>
+
+            <span>
+                Record
+            </span>
+
+        </button>
+
+
+        <button
+            id="videoSwitchButton"
+            class="call-control"
+            type="button"
+            aria-pressed="false"
+        >
+
+            <span class="control-icon">
+                🎥
+            </span>
+
+            <span>
+                Video
+            </span>
+
+        </button>
+
+
+    </section>
+
+
+    <!-- =================================
+         RECORDING BAR
+    ================================== -->
+
+    <section
+        id="recordingPanel"
+        class="recording-panel"
+        hidden
+    >
+
+        <div class="recording-status">
+
+            <span class="recording-dot"></span>
+
+            <strong>
+                Recording
+            </strong>
+
+            <span id="recordingTimer">
+                00:00
+            </span>
+
+        </div>
+
+
+        <div class="recording-controls">
+
+            <button
+                id="pauseRecordingButton"
+                type="button"
+            >
+                ⏸
+            </button>
+
+            <button
+                id="resumeRecordingButton"
+                type="button"
+                hidden
+            >
+                ▶
+            </button>
+
+            <button
+                id="stopRecordingButton"
+                type="button"
+            >
+                ⏹
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         END CALL
+    ================================== -->
+
+    <section class="call-end-area">
+
+        <button
+            id="callActionButton"
+            class="call-action-button"
+            type="button"
+            aria-label="End call"
+        >
+            📞
+        </button>
+
+        <span
+            id="callActionLabel"
+            class="call-action-label"
+        >
+            End call
+        </span>
+
+    </section>
+
+
+    <!-- =================================
+         REMOTE AUDIO
+    ================================== -->
+
+    <audio
+        id="remoteAudio"
+        autoplay
+    ></audio>
+
+
+</main>
+
+
+<!-- =====================================
+     FIREBASE
+====================================== -->
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+
+<script src="../js/nexvo-identity.js"></script>
+
+<script src="../js/firebase-init.js"></script>
+
+<script src="../js/call-signaling.js"></script>
+
+<script src="../js/webrtc-call.js"></script>
+
+<script src="../js/call.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Video</title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/video.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="video-page">
+
+
+    <section
+        class="video-viewport"
+        id="videoViewport"
+    >
+
+
+        <!-- =================================
+             TOP HEADER
+        ================================== -->
+
+        <header class="video-header">
+
+            <div class="video-brand">
+
+                <div class="video-brand-mark">
+                    N
+                </div>
+
+                <strong>
+                    NEXVO
+                </strong>
+
+                <span>
+                    Video
+                </span>
+
+            </div>
+
+
+            <button
+                id="videoSearchButton"
+                class="video-search-button"
+                type="button"
+                aria-label="Search videos"
+            >
+                ⌕
+            </button>
+
+        </header>
+
+
+
+        <!-- =================================
+             VIDEO TABS
+        ================================== -->
+
+        <nav
+            class="video-tabs"
+            aria-label="Video sections"
+        >
+
+            <button
+                class="video-tab active"
+                data-feed="for-you"
+                type="button"
+            >
+                FOR YOU
+            </button>
+
+
+            <button
+                class="video-tab"
+                data-feed="friends"
+                type="button"
+            >
+                FRIENDS
+            </button>
+
+
+            <button
+                class="video-tab"
+                data-feed="communities"
+                type="button"
+            >
+                COMMUNITIES
+            </button>
+
+        </nav>
+
+
+
+        <!-- =================================
+             SEARCH PANEL
+        ================================== -->
+
+        <section
+            id="videoSearchPanel"
+            class="video-search-panel"
+            aria-hidden="true"
+        >
+
+            <div class="video-search-inner">
+
+                <button
+                    id="closeVideoSearch"
+                    class="search-back"
+                    type="button"
+                    aria-label="Close search"
+                >
+                    ‹
+                </button>
+
+
+                <div class="video-search-field">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        id="videoSearchInput"
+                        type="search"
+                        placeholder="Search videos..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button
+                    id="clearVideoSearch"
+                    class="clear-video-search"
+                    type="button"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="videoSearchResults"
+                class="video-search-results"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================
+             VIDEO STAGE
+        ================================== -->
+
+        <section
+            id="videoStage"
+            class="video-stage"
+        >
+
+
+            <video
+                id="mainVideo"
+                class="main-video"
+                playsinline
+                loop
+                preload="metadata"
+            ></video>
+
+
+            <div
+                id="videoPlaceholder"
+                class="video-placeholder"
+            >
+
+                <div class="placeholder-logo">
+                    N
+                </div>
+
+                <h2 id="placeholderTitle">
+                    NEXVO Video
+                </h2>
+
+                <p id="placeholderText">
+                    Videos will appear here.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RIGHT ACTIONS
+            ================================== -->
+
+            <aside class="video-actions">
+
+
+                <button
+                    id="videoLikeButton"
+                    class="video-action primary-action"
+                    type="button"
+                    aria-label="Like video"
+                >
+
+                    <span
+                        id="videoLikeIcon"
+                        class="action-symbol"
+                    >
+                        ♡
+                    </span>
+
+                    <small id="videoLikeCount">
+                        0
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    id="videoCommentButton"
+                    class="video-action primary-action"
+                    type="button"
+                    aria-label="Comments"
+                >
+
+                    <span class="action-symbol">
+                        ◌
+                    </span>
+
+                    <small id="videoCommentCount">
+                        0
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    id="moreVideoActions"
+                    class="video-action more-action"
+                    type="button"
+                    aria-label="More video actions"
+                    aria-expanded="false"
+                >
+                    ⋮
+                </button>
+
+
+
+                <div
+                    id="videoActionMenu"
+                    class="video-action-menu"
+                    aria-hidden="true"
+                >
+
+                    <button
+                        class="secondary-video-action"
+                        data-video-action="save"
+                        type="button"
+                    >
+
+                        <span>
+                            ▫
+                        </span>
+
+                        Save
+
+                    </button>
+
+
+                    <button
+                        class="secondary-video-action"
+                        data-video-action="share"
+                        type="button"
+                    >
+
+                        <span>
+                            ↗
+                        </span>
+
+                        Share
+
+                    </button>
+
+
+                    <button
+                        class="secondary-video-action"
+                        data-video-action="not-interested"
+                        type="button"
+                    >
+
+                        <span>
+                            −
+                        </span>
+
+                        Not interested
+
+                    </button>
+
+
+                    <button
+                        class="secondary-video-action"
+                        data-video-action="report"
+                        type="button"
+                    >
+
+                        <span>
+                            ⚑
+                        </span>
+
+                        Report
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================
+                 VIDEO INFORMATION
+            ================================== -->
+
+            <section class="video-information">
+
+                <button
+                    id="videoCreator"
+                    class="video-creator"
+                    type="button"
+                >
+
+                    <span
+                        id="creatorAvatar"
+                        class="creator-avatar"
+                    >
+                        N
+                    </span>
+
+                    <span id="creatorName">
+                        NEXVO
+                    </span>
+
+                </button>
+
+
+                <p
+                    id="videoCaption"
+                    class="video-caption"
+                >
+                    Discover videos on NEXVO.
+                </p>
+
+
+                <div class="video-audio">
+
+                    <span>
+                        ♫
+                    </span>
+
+                    <span id="videoAudioName">
+                        NEXVO Audio
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 COMMENTS PANEL
+            ================================== -->
+
+            <section
+                id="commentsPanel"
+                class="comments-panel"
+                aria-hidden="true"
+            >
+
+
+                <div class="comments-header">
+
+                    <div>
+
+                        <strong>
+                            Comments
+                        </strong>
+
+                        <span
+                            id="commentsHeaderCount"
+                        >
+                            0 comments
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="closeComments"
+                        class="comments-close"
+                        type="button"
+                        aria-label="Close comments"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="commentsList"
+                    class="comments-list"
+                >
+
+                    <div
+                        id="commentsEmpty"
+                        class="comments-empty"
+                    >
+
+                        <div>
+                            ◌
+                        </div>
+
+                        <strong>
+                            No comments yet
+                        </strong>
+
+                        <span>
+                            Be the first to comment.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <form
+                    id="commentForm"
+                    class="comment-form"
+                >
+
+                    <div
+                        id="commentAvatar"
+                        class="comment-avatar"
+                    >
+                        N
+                    </div>
+
+
+                    <input
+                        id="commentInput"
+                        type="text"
+                        maxlength="500"
+                        placeholder="Add a comment..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        id="sendCommentButton"
+                        type="submit"
+                        aria-label="Send comment"
+                    >
+                        ➤
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================
+                 BOTTOM FOOTER
+            ================================== -->
+
+            <footer class="video-footer">
+
+
+                <button
+                    id="videoHomeButton"
+                    class="footer-item"
+                    type="button"
+                    aria-label="Home"
+                >
+
+                    <span class="footer-icon">
+                        ⌂
+                    </span>
+
+                    <span class="footer-label">
+                        HOME
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    id="videoCreateButton"
+                    class="video-create-button"
+                    type="button"
+                    aria-label="Create or upload video"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    id="videoMeButton"
+                    class="footer-item"
+                    type="button"
+                    aria-label="Me"
+                >
+
+                    <span class="footer-icon">
+                        ◯
+                    </span>
+
+                    <span class="footer-label">
+                        ME
+                    </span>
+
+                </button>
+
+
+            </footer>
+
+
+
+            <!-- =================================
+                 ME MENU
+            ================================== -->
+
+            <section
+                id="meMenu"
+                class="me-menu"
+                aria-hidden="true"
+            >
+
+                <div class="me-menu-header">
+
+                    <button
+                        id="closeMeMenu"
+                        class="me-back-button"
+                        type="button"
+                        aria-label="Back"
+                    >
+                        ‹
+                    </button>
+
+
+                    <div>
+
+                        <strong>
+                            ME
+                        </strong>
+
+                        <span>
+                            Your video space
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="me-menu-list">
+
+
+                    <button
+                        class="me-menu-item"
+                        data-me-action="videos"
+                        type="button"
+                    >
+
+                        <span class="me-menu-icon">
+                            ▷
+                        </span>
+
+                        <span class="me-menu-text">
+
+                            <strong>
+                                My Videos
+                            </strong>
+
+                            <small>
+                                Videos you have uploaded
+                            </small>
+
+                        </span>
+
+                        <b>
+                            ›
+                        </b>
+
+                    </button>
+
+
+
+                    <button
+                        class="me-menu-item"
+                        data-me-action="drafts"
+                        type="button"
+                    >
+
+                        <span class="me-menu-icon">
+                            □
+                        </span>
+
+                        <span class="me-menu-text">
+
+                            <strong>
+                                Drafts
+                            </strong>
+
+                            <small>
+                                Videos waiting to be shared
+                            </small>
+
+                        </span>
+
+                        <b>
+                            ›
+                        </b>
+
+                    </button>
+
+
+
+                    <button
+                        class="me-menu-item"
+                        data-me-action="saved"
+                        type="button"
+                    >
+
+                        <span class="me-menu-icon">
+                            ♢
+                        </span>
+
+                        <span class="me-menu-text">
+
+                            <strong>
+                                Saved
+                            </strong>
+
+                            <small>
+                                Videos you saved
+                            </small>
+
+                        </span>
+
+                        <b>
+                            ›
+                        </b>
+
+                    </button>
+
+
+
+                    <button
+                        class="me-menu-item"
+                        data-me-action="activity"
+                        type="button"
+                    >
+
+                        <span class="me-menu-icon">
+                            ◌
+                        </span>
+
+                        <span class="me-menu-text">
+
+                            <strong>
+                                Video Activity
+                            </strong>
+
+                            <small>
+                                Your recent video activity
+                            </small>
+
+                        </span>
+
+                        <b>
+                            ›
+                        </b>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     FIREBASE
+========================================= -->
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+
+<script src="../js/nexvo-identity.js"></script>
+
+<script src="../js/firebase-init.js"></script>
+
+
+<!-- =========================================
+     NEXVO VIDEO
+========================================= -->
+
+<script src="../js/video.js"></script>
+
+
+</body>
+
+</html>

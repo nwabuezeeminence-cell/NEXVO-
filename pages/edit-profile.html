@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Edit Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/edit-profile.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="edit-profile-page">
+
+
+    <!-- HEADER -->
+
+    <header class="edit-header">
+
+        <button
+            id="cancelButton"
+            class="header-button"
+            type="button"
+        >
+            Cancel
+        </button>
+
+
+        <h1>
+            Edit Profile
+        </h1>
+
+
+        <button
+            id="saveButton"
+            class="save-button"
+            type="button"
+        >
+            Save
+        </button>
+
+    </header>
+
+
+
+    <!-- PROFILE PHOTO -->
+
+    <section class="photo-section">
+
+        <button
+            id="avatarButton"
+            class="edit-avatar"
+            type="button"
+            aria-label="Change profile picture"
+        >
+
+            <span id="avatarContent">
+                👤
+            </span>
+
+            <span class="camera-badge">
+                +
+            </span>
+
+        </button>
+
+
+        <!-- Hidden image picker -->
+
+        <input
+            id="profilePhotoInput"
+            type="file"
+            accept="image/*"
+            hidden
+        >
+
+
+        <p>
+            Add profile picture
+        </p>
+
+    </section>
+
+
+
+    <!-- FORM -->
+
+    <section class="profile-form">
+
+
+        <!-- DISPLAY NAME -->
+
+        <div class="form-field">
+
+            <label for="displayName">
+                Display name
+            </label>
+
+            <input
+                id="displayName"
+                type="text"
+                maxlength="40"
+                placeholder="Your name"
+                autocomplete="name"
+            >
+
+            <small>
+                This is the name people will see.
+            </small>
+
+        </div>
+
+
+
+        <!-- USERNAME -->
+
+        <div class="form-field">
+
+            <label for="username">
+                NEXVO username
+            </label>
+
+
+            <div class="username-input">
+
+                <span>
+                    @
+                </span>
+
+                <input
+                    id="username"
+                    type="text"
+                    maxlength="24"
+                    placeholder="username"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <small id="usernameMessage">
+                Your username helps people find you.
+            </small>
+
+        </div>
+
+
+
+        <!-- BIO -->
+
+        <div class="form-field">
+
+            <label for="bio">
+                Bio
+            </label>
+
+            <textarea
+                id="bio"
+                maxlength="160"
+                placeholder="Tell people a little about yourself..."
+            ></textarea>
+
+
+            <div class="character-count">
+
+                <span id="characterCount">
+                    0
+                </span>
+
+                / 160
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NEXVO ID -->
+
+        <div class="permanent-id">
+
+            <div>
+
+                <span>
+                    NEXVO ID
+                </span>
+
+                <strong id="nexvoId">
+                    —
+                </strong>
+
+            </div>
+
+
+            <span class="locked-label">
+                Permanent
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- STATUS -->
+
+    <div
+        id="saveMessage"
+        class="save-message"
+    ></div>
+
+
+</main>
+
+
+<script src="../data/identity.js"></script>
+
+<script src="../js/edit-profile.js"></script>
+
+</body>
+
+</html>

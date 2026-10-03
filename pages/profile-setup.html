@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO — Profile Setup</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/profile-setup.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="profile-page">
+
+        <!-- =====================================
+             TOP
+        ====================================== -->
+
+        <header class="profile-header">
+
+            <div class="brand-small">
+                NEXVO
+            </div>
+
+            <div class="setup-progress">
+                <span class="progress-dot active"></span>
+                <span class="progress-dot"></span>
+                <span class="progress-dot"></span>
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <section class="profile-content">
+
+            <div class="profile-intro">
+
+                <span class="intro-icon">
+                    ✨
+                </span>
+
+                <h1>
+                    Make NEXVO yours
+                </h1>
+
+                <p>
+                    Set up your profile so people can
+                    recognize and connect with you.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PROFILE PHOTO
+            ====================================== -->
+
+            <div class="photo-section">
+
+                <div
+                    class="profile-photo"
+                    id="profilePhoto"
+                >
+
+                    <span id="photoPlaceholder">
+                        👤
+                    </span>
+
+                    <img
+                        id="photoPreview"
+                        src=""
+                        alt="Profile preview"
+                    >
+
+                </div>
+
+
+                <label
+                    for="photoInput"
+                    class="photo-button"
+                >
+                    Add photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <p class="photo-note">
+                    You can change this anytime.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 FORM
+            ====================================== -->
+
+            <form
+                id="profileForm"
+                class="profile-form"
+            >
+
+
+                <!-- DISPLAY NAME -->
+
+                <div class="input-group">
+
+                    <label for="displayName">
+                        Display name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="displayName"
+                        placeholder="How should people see you?"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <small>
+                        This is the name people will see on NEXVO.
+                    </small>
+
+                </div>
+
+
+
+                <!-- USERNAME -->
+
+                <div class="input-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="username-wrapper">
+
+                        <span>@</span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="yourusername"
+                            autocomplete="username"
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+                    <small id="usernameMessage">
+                        Your unique NEXVO username.
+                    </small>
+
+                </div>
+
+
+
+                <!-- BIO -->
+
+                <div class="input-group">
+
+                    <label for="bio">
+                        Bio
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="bio"
+                        maxlength="120"
+                        placeholder="Tell people a little about yourself..."
+                    ></textarea>
+
+                    <div class="character-count">
+
+                        <span id="bioCount">
+                            0
+                        </span>
+
+                        / 120
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     CONTINUE
+                ====================================== -->
+
+                <button
+                    type="submit"
+                    class="continue-button"
+                >
+
+                    <span>
+                        Finish profile
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- SKIP -->
+
+            <button
+                id="skipProfile"
+                class="skip-button"
+                type="button"
+            >
+                Skip for now
+            </button>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="../data/nexvo-data.js"></script>
+
+<script src="../js/profile-setup.js"></script>
+
+</body>
+
+</html>

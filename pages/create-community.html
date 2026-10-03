@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Create Community</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/create-community.css"
+    >
+    <link rel="stylesheet" href="../css/nexvo-plus.css">
+
+</head>
+
+
+<body>
+
+    <main class="create-community-page">
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header class="create-community-header">
+
+            <button
+                id="backButton"
+                class="create-community-back"
+                type="button"
+                aria-label="Go back"
+            >
+                ‹
+            </button>
+
+            <div>
+
+                <span class="page-label">
+                    NEXVO
+                </span>
+
+                <h1>
+                    Create Community
+                </h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             COMMUNITY PREVIEW
+        ========================================== -->
+
+        <section class="community-preview">
+
+            <button
+                id="communityPhotoButton"
+                class="community-photo"
+                type="button"
+                aria-label="Choose community photo"
+            >
+
+                <span>
+                    🌐
+                </span>
+
+                <span class="photo-camera">
+                    📷
+                </span>
+
+            </button>
+
+
+            <div>
+
+                <h2 id="previewCommunityName">
+                    New Community
+                </h2>
+
+                <p id="previewCommunityCategory">
+                    Choose a category
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMMUNITY DETAILS
+        ========================================== -->
+
+        <section class="community-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Community details
+                </h2>
+
+                <p>
+                    Tell people what your community is about.
+                </p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="communityName">
+                    Community name
+                </label>
+
+                <input
+                    id="communityName"
+                    type="text"
+                    maxlength="60"
+                    placeholder="Enter community name"
+                    autocomplete="off"
+                >
+
+                <small id="communityNameCount">
+                    0 / 60
+                </small>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="communityDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="communityDescription"
+                    maxlength="250"
+                    rows="4"
+                    placeholder="Describe your community..."
+                ></textarea>
+
+                <small id="communityDescriptionCount">
+                    0 / 250
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CATEGORY
+        ========================================== -->
+
+        <section class="community-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Category
+                </h2>
+
+                <p>
+                    Choose the category that best describes your community.
+                </p>
+
+            </div>
+
+
+            <div
+                id="categoryGrid"
+                class="category-grid"
+            >
+
+                <button
+                    class="category-option active"
+                    data-category="General"
+                    type="button"
+                >
+                    <span>✨</span>
+                    <strong>General</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Education"
+                    type="button"
+                >
+                    <span>📚</span>
+                    <strong>Education</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Technology"
+                    type="button"
+                >
+                    <span>💻</span>
+                    <strong>Technology</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Gaming"
+                    type="button"
+                >
+                    <span>🎮</span>
+                    <strong>Gaming</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Music"
+                    type="button"
+                >
+                    <span>🎵</span>
+                    <strong>Music</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Sports"
+                    type="button"
+                >
+                    <span>⚽</span>
+                    <strong>Sports</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Business"
+                    type="button"
+                >
+                    <span>💼</span>
+                    <strong>Business</strong>
+                </button>
+
+
+                <button
+                    class="category-option"
+                    data-category="Entertainment"
+                    type="button"
+                >
+                    <span>🎬</span>
+                    <strong>Entertainment</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             VISIBILITY
+        ========================================== -->
+
+        <section class="community-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Community visibility
+                </h2>
+
+                <p>
+                    Choose who can discover your community.
+                </p>
+
+            </div>
+
+
+            <div class="visibility-options">
+
+                <button
+                    class="visibility-option active"
+                    data-visibility="public"
+                    type="button"
+                >
+
+                    <span class="visibility-icon">
+                        🌍
+                    </span>
+
+                    <span class="visibility-text">
+
+                        <strong>
+                            Public
+                        </strong>
+
+                        <small>
+                            Anyone can discover this community.
+                        </small>
+
+                    </span>
+
+                    <span class="visibility-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="visibility-option"
+                    data-visibility="private"
+                    type="button"
+                >
+
+                    <span class="visibility-icon">
+                        🔒
+                    </span>
+
+                    <span class="visibility-text">
+
+                        <strong>
+                            Private
+                        </strong>
+
+                        <small>
+                            Only invited people can join.
+                        </small>
+
+                    </span>
+
+                    <span class="visibility-check">
+                        ✓
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CREATE
+        ========================================== -->
+
+        <button
+            id="createCommunityButton"
+            class="create-community-button"
+            type="button"
+            disabled
+        >
+            Create Community
+        </button>
+
+    </main>
+
+
+    <!-- =========================================
+         PHOTO MESSAGE
+    ========================================== -->
+
+    <div
+        id="photoMessage"
+        class="community-message"
+        aria-hidden="true"
+    >
+
+        <div class="message-card">
+
+            <div class="message-icon">
+                📷
+            </div>
+
+            <h3>
+                Community photo
+            </h3>
+
+            <p>
+                Community photo selection will be connected next.
+            </p>
+
+            <button
+                id="closePhotoMessage"
+                type="button"
+            >
+                Got it
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         NEXVO GLOBAL N BUTTON
+    ========================================== -->
+
+    <button
+        class="nexvo-global-button"
+        id="nexvoGlobalButton"
+        type="button"
+        aria-label="Open NEXVO menu"
+        aria-expanded="false"
+        aria-controls="nexvoGlobalMenu"
+    >
+        <span>N</span>
+    </button>
+
+
+    <div
+        class="nexvo-global-overlay"
+        id="nexvoGlobalOverlay"
+    ></div>
+
+
+    <div
+        class="nexvo-global-menu"
+        id="nexvoGlobalMenu"
+        aria-hidden="true"
+    >
+
+        <div class="nexvo-menu-header">
+
+            <div class="nexvo-menu-title">
+
+                <div class="nexvo-menu-logo">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>
+                        NEXVO
+                    </strong>
+
+                    <span>
+                        Quick actions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="nexvo-menu-close"
+                id="nexvoMenuClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="nexvo-menu-actions">
+
+            <button
+                class="nexvo-menu-action"
+                data-action="friend"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👤
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Add Friend
+                    </strong>
+
+                    <small>
+                        Connect with someone new
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="group"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    👥
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Group
+                    </strong>
+
+                    <small>
+                        Start a group conversation
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="community"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    🌐
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Create Community
+                    </strong>
+
+                    <small>
+                        Build your NEXVO community
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="nexvo-menu-action"
+                data-action="call"
+                type="button"
+            >
+
+                <span class="nexvo-action-icon">
+                    📞
+                </span>
+
+                <span class="nexvo-action-text">
+
+                    <strong>
+                        Make Call
+                    </strong>
+
+                    <small>
+                        Start a NEXVO call
+                    </small>
+
+                </span>
+
+                <span class="nexvo-action-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="../data/nexvo-data.js"></script>
+
+    <script src="../js/nexvo-plus.js"></script>
+
+    <script src="../js/create-community.js"></script>
+
+</body>
+
+</html>

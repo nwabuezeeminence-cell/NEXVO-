@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXVO • Scan QR</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/qr-scanner.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="scanner-page">
+
+
+    <!-- HEADER -->
+
+    <header class="scanner-header">
+
+        <button
+            id="closeScanner"
+            class="scanner-close"
+            type="button"
+        >
+            ×
+        </button>
+
+
+        <div>
+
+            <h1>
+                Scan NEXVO QR
+            </h1>
+
+            <p>
+                Point your camera at a NEXVO code
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CAMERA -->
+
+    <section class="camera-section">
+
+
+        <div
+            id="reader"
+            class="camera-reader"
+        ></div>
+
+
+
+        <!-- SCANNING FRAME -->
+
+        <div class="scan-overlay">
+
+            <div class="scan-corner top-left"></div>
+
+            <div class="scan-corner top-right"></div>
+
+            <div class="scan-corner bottom-left"></div>
+
+            <div class="scan-corner bottom-right"></div>
+
+            <div class="scan-line"></div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- STATUS -->
+
+    <section
+        id="scannerStatus"
+        class="scanner-status"
+    >
+
+        <div class="status-icon">
+            ▦
+        </div>
+
+        <h2>
+            Looking for a QR code
+        </h2>
+
+        <p>
+            Place the NEXVO QR inside the frame.
+        </p>
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section
+        id="scanResult"
+        class="scan-result"
+    >
+
+        <div
+            id="resultAvatar"
+            class="result-avatar"
+        >
+            👤
+        </div>
+
+
+        <h2 id="resultName">
+            NEXVO Member
+        </h2>
+
+
+        <p id="resultUsername">
+            @username
+        </p>
+
+
+        <div class="result-id">
+
+            <span>
+                NEXVO ID
+            </span>
+
+            <strong id="resultNexvoId">
+                —
+            </strong>
+
+        </div>
+
+
+        <button
+            id="addScannedFriend"
+            class="add-scanned-button"
+            type="button"
+        >
+            Add Friend
+        </button>
+
+
+        <button
+            id="scanAgain"
+            class="scan-again-button"
+            type="button"
+        >
+            Scan Again
+        </button>
+
+    </section>
+
+
+
+    <!-- INVALID -->
+
+    <section
+        id="invalidResult"
+        class="invalid-result"
+    >
+
+        <div class="invalid-icon">
+            !
+        </div>
+
+
+        <h2>
+            Not a NEXVO QR
+        </h2>
+
+
+        <p>
+            This QR code isn't recognized as
+            a NEXVO connection code.
+        </p>
+
+
+        <button
+            id="tryAgain"
+            type="button"
+        >
+            Try Again
+        </button>
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- QR SCANNER LIBRARY -->
+
+<script
+    src="https://unpkg.com/html5-qrcode"
+></script>
+
+
+<script src="../data/identity.js"></script>
+
+<script src="../data/qr-system.js"></script>
+
+<script src="../data/friends.js"></script>
+
+<script src="../js/qr-scanner.js"></script>
+
+</body>
+
+</html>
