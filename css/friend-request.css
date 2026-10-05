@@ -1,0 +1,714 @@
+/* =========================================
+   NEXVO
+   FRIEND REQUESTS PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.friend-requests-page {
+
+    min-height: 100vh;
+
+    padding-bottom: 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,1),
+            rgba(255,245,249,1)
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.requests-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        22px
+        20px
+        14px;
+
+}
+
+
+.back-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    box-shadow:
+        0 8px 25px
+        rgba(160,0,60,.10);
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+.header-title h1 {
+
+    margin: 0;
+
+    font-size: 23px;
+
+}
+
+
+.header-title p {
+
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+    opacity: .55;
+
+}
+
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.request-tabs {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    margin:
+        8px
+        18px
+        20px;
+
+    padding: 5px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 8px 30px
+        rgba(150,0,60,.08);
+
+}
+
+
+.request-tab {
+
+    position: relative;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 12px;
+
+    background: transparent;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.request-tab.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(220,20,90,.16),
+            rgba(255,60,90,.10)
+        );
+
+    color:
+        #a90045;
+
+}
+
+
+.request-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 22px;
+
+    height: 22px;
+
+    margin-left: 5px;
+
+    padding: 0 6px;
+
+    border-radius: 20px;
+
+    background:
+        #b9004d;
+
+    color: white;
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.requests-content {
+
+    padding:
+        0 18px;
+
+}
+
+
+
+/* =========================================
+   REQUEST CARD
+========================================= */
+
+.request-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(160,0,60,.09);
+
+}
+
+
+.request-avatar {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1ed,
+            #ffc4d8
+        );
+
+    font-size: 24px;
+
+}
+
+
+.request-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.request-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.request-name {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.request-username {
+
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    opacity: .55;
+
+}
+
+
+.request-actions {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.request-action {
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding:
+        9px
+        11px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.accept-request {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c40055,
+            #ef3e68
+        );
+
+    color: white;
+
+}
+
+
+.decline-request {
+
+    background:
+        rgba(220,20,80,.08);
+
+    color:
+        #a90045;
+
+}
+
+
+.cancel-request {
+
+    background:
+        rgba(0,0,0,.06);
+
+    color:
+        #555;
+
+}
+
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.requests-empty {
+
+    text-align: center;
+
+    padding:
+        80px
+        25px;
+
+}
+
+
+.empty-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin:
+        0 auto
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(220,20,90,.13),
+            rgba(255,70,100,.08)
+        );
+
+    font-size: 35px;
+
+}
+
+
+.requests-empty h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 19px;
+
+}
+
+
+.requests-empty p {
+
+    max-width: 280px;
+
+    margin: auto;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    opacity: .55;
+
+}
+
+
+
+/* =========================================
+   BOTTOM NAVIGATION
+========================================= */
+
+.nexvo-bottom-nav {
+
+    position: fixed;
+
+    left: 12px;
+
+    right: 12px;
+
+    bottom: 12px;
+
+    height: 68px;
+
+    z-index: 100;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.15fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    padding: 6px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.84);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 15px 45px
+        rgba(100,0,40,.15);
+
+}
+
+
+.nexvo-nav-item {
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 10px;
+
+    opacity: .55;
+
+    cursor: pointer;
+
+}
+
+
+.nexvo-nav-item.active {
+
+    opacity: 1;
+
+    color:
+        #b4004d;
+
+}
+
+
+.nav-icon {
+
+    font-size: 21px;
+
+}
+
+
+.nexvo-plus-button {
+
+    width: 53px;
+
+    height: 53px;
+
+    margin: auto;
+
+    border: none;
+
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9004d,
+            #f33d69
+        );
+
+    color: white;
+
+    font-size: 31px;
+
+    line-height: 1;
+
+    box-shadow:
+        0 9px 25px
+        rgba(190,0,75,.28);
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   PLUS MENU
+========================================= */
+
+.nexvo-plus-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 150;
+
+    background:
+        rgba(80,0,30,.18);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.nexvo-plus-overlay.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.nexvo-plus-menu {
+
+    position: fixed;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 92px;
+
+    z-index: 160;
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(90,0,40,.2);
+
+    transform:
+        translateY(20px)
+        scale(.96);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .28s cubic-bezier(
+            .2,
+            .8,
+            .2,
+            1
+        );
+
+}
+
+
+.nexvo-plus-menu.active {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.plus-action {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 14px;
+
+    border-radius: 17px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.plus-action:hover {
+
+    background:
+        rgba(200,0,70,.07);
+
+}
+
+
+.plus-action span {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(220,20,90,.09);
+
+    font-size: 20px;
+
+}

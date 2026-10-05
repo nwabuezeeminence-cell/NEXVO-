@@ -1,0 +1,647 @@
+/* =========================================
+   NEXVO
+   CHATS PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.chats-page {
+
+    min-height: 100vh;
+
+    padding:
+
+        24px
+
+        20px
+
+        110px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.chats-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+}
+
+
+.page-label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.65;
+
+}
+
+
+.chats-header h1 {
+
+    margin: 4px 0 0;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================================
+   HEADER BUTTON
+========================================= */
+
+.header-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background:
+
+        rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+
+        0 8px 25px
+        rgba(160, 30, 70, 0.12);
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.chat-search-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    background:
+
+        rgba(255, 255, 255, 0.75);
+
+    border:
+
+        1px solid
+        rgba(180, 40, 90, 0.10);
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(160, 30, 70, 0.08);
+
+}
+
+
+.chat-search-box span {
+
+    opacity: 0.55;
+
+}
+
+
+.chat-search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   CHAT LIST
+========================================= */
+
+.chat-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+/* =========================================
+   CHAT ITEM
+========================================= */
+
+.chat-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    border-radius: 20px;
+
+    background:
+
+        rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+
+        0 8px 25px
+        rgba(160, 30, 70, 0.07);
+
+}
+
+
+.chat-avatar {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #d4145a,
+            #b3123f
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+}
+
+
+.chat-content {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.chat-name {
+
+    display: block;
+
+    font-weight: 700;
+
+}
+
+
+.chat-preview {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    opacity: 0.55;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.chat-time {
+
+    align-self: flex-start;
+
+    font-size: 11px;
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.chat-empty {
+
+    min-height: 50vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.empty-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 25px;
+
+    margin-bottom: 18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(212, 20, 90, 0.12),
+            rgba(179, 18, 63, 0.08)
+        );
+
+    font-size: 30px;
+
+}
+
+
+.chat-empty h2 {
+
+    margin: 0;
+
+}
+
+
+.chat-empty p {
+
+    max-width: 290px;
+
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    opacity: 0.55;
+
+}
+
+
+/* =========================================
+   BOTTOM NAVIGATION
+========================================= */
+
+.nexvo-bottom-nav {
+
+    position: fixed;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    height: 72px;
+
+    z-index: 100;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.15fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    padding: 7px;
+
+    border-radius: 27px;
+
+    background:
+
+        rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+
+        0 15px 45px
+        rgba(120, 20, 55, 0.16);
+
+}
+
+
+/* =========================================
+   NAV ITEM
+========================================= */
+
+.nexvo-nav-item {
+
+    height: 58px;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+
+}
+
+
+.nexvo-nav-item.active {
+
+    opacity: 1;
+
+}
+
+
+.nav-icon {
+
+    font-size: 19px;
+
+}
+
+
+.nav-label {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   PLUS
+========================================= */
+
+.nexvo-plus-button {
+
+    width: 58px;
+
+    height: 58px;
+
+    justify-self: center;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #d4145a,
+            #b3123f
+        );
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(180, 20, 70, 0.35);
+
+    transition:
+
+        transform 0.3s ease;
+
+}
+
+
+.nexvo-plus-button.open {
+
+    transform: rotate(45deg);
+
+}
+
+
+/* =========================================
+   PLUS OVERLAY
+========================================= */
+
+.nexvo-plus-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 150;
+
+    background:
+
+        rgba(40, 0, 15, 0.12);
+
+    backdrop-filter: blur(4px);
+
+    -webkit-backdrop-filter: blur(4px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+.nexvo-plus-overlay.show {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================
+   PLUS MENU
+========================================= */
+
+.nexvo-plus-menu {
+
+    position: fixed;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 98px;
+
+    z-index: 200;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    background:
+
+        rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(25px);
+
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(100, 10, 40, 0.18);
+
+    transform:
+
+        translateY(25px)
+        scale(0.95);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+
+        opacity 0.25s ease,
+
+        transform 0.25s ease;
+
+}
+
+
+.nexvo-plus-menu.show {
+
+    transform:
+
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.plus-action {
+
+    min-height: 70px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background:
+
+        rgba(255, 255, 255, 0.65);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+}
+
+
+.plus-action span {
+
+    font-size: 23px;
+
+}
+
+
+.plus-action strong {
+
+    font-size: 11px;
+
+}

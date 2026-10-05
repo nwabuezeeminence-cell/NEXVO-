@@ -1,0 +1,361 @@
+/* =========================================
+   NEXVO
+   MY QR
+========================================= */
+
+
+.my-qr-page {
+
+    min-height: 100vh;
+
+    padding-bottom: 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fff5f9
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.qr-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        20px
+        18px;
+
+}
+
+
+.qr-back {
+
+    width: 43px;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 7px 22px
+        rgba(150,0,60,.08);
+
+    font-size: 29px;
+
+}
+
+
+.qr-header h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+.qr-header p {
+
+    margin:
+        4px
+        0
+        0;
+
+    font-size: 11px;
+
+    opacity: .5;
+
+}
+
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.qr-profile {
+
+    padding:
+        12px
+        20px
+        20px;
+
+    text-align: center;
+
+}
+
+
+.qr-avatar {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin:
+        0
+        auto
+        10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd7e5,
+            #fff0f5
+        );
+
+    font-size: 29px;
+
+}
+
+
+.qr-profile h2 {
+
+    margin:
+        0
+        0
+        3px;
+
+    font-size: 17px;
+
+}
+
+
+.qr-profile p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    opacity: .5;
+
+}
+
+
+
+/* =========================================
+   QR CARD
+========================================= */
+
+.qr-card {
+
+    width:
+        calc(100% - 36px);
+
+    max-width: 350px;
+
+    box-sizing: border-box;
+
+    margin:
+        0
+        auto;
+
+    padding:
+        24px
+        20px;
+
+    border-radius: 27px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        0 15px 45px
+        rgba(140,0,60,.10);
+
+    text-align: center;
+
+}
+
+
+
+/* =========================================
+   REAL QR
+========================================= */
+
+.real-qr {
+
+    width: 250px;
+
+    height: 250px;
+
+    max-width: 100%;
+
+    margin:
+        0
+        auto
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 13px;
+
+}
+
+
+.real-qr img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+
+/* =========================================
+   QR ID
+========================================= */
+
+.qr-id-label {
+
+    margin:
+        0
+        0
+        5px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    opacity: .4;
+
+}
+
+
+#qrNexvoId {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* =========================================
+   INSTRUCTIONS
+========================================= */
+
+.qr-instructions {
+
+    padding:
+        24px
+        28px
+        10px;
+
+    text-align: center;
+
+}
+
+
+.qr-instructions h3 {
+
+    margin:
+        0
+        7px;
+
+    font-size: 14px;
+
+}
+
+
+.qr-instructions p {
+
+    max-width: 310px;
+
+    margin: auto;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    opacity: .5;
+
+}
+
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.qr-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        15px
+        20px;
+
+}
+
+
+.qr-actions button {
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding:
+        11px
+        18px;
+
+    background:
+        rgba(190,0,75,.08);
+
+    color: #b9004d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.qr-actions button:active {
+
+    transform:
+        scale(.97);
+
+}

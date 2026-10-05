@@ -1,0 +1,644 @@
+/* =========================================
+   NEXVO
+   UNIVERSAL N BUTTON
+========================================= */
+
+
+/* =========================================
+   N BUTTON
+========================================= */
+
+.nexvo-global-button {
+
+    position: fixed;
+
+    left: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    z-index: 10001;
+
+    box-shadow:
+        0 8px 25px
+        rgba(180, 20, 90, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+/* =========================================
+   N BUTTON LETTER
+========================================= */
+
+.nexvo-global-button span {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* =========================================
+   N BUTTON HOVER
+========================================= */
+
+.nexvo-global-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 11px 30px
+        rgba(180, 20, 90, 0.38);
+
+}
+
+
+/* =========================================
+   N BUTTON OPEN
+========================================= */
+
+.nexvo-global-button.open {
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.nexvo-global-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(30, 10, 25, 0.22);
+
+    backdrop-filter:
+        blur(4px);
+
+    -webkit-backdrop-filter:
+        blur(4px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 9998;
+
+    transition:
+        opacity 0.25s ease;
+
+}
+
+
+/* =========================================
+   OVERLAY OPEN
+========================================= */
+
+.nexvo-global-overlay.open {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================
+   NEXVO MENU
+========================================= */
+
+.nexvo-global-menu {
+
+    position: fixed;
+
+    left: 20px;
+    bottom: 92px;
+
+    width:
+        min(
+            calc(100vw - 40px),
+            390px
+        );
+
+    box-sizing: border-box;
+
+    padding: 18px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        rgba(216, 27, 96, 0.14);
+
+    border-radius: 24px;
+
+    opacity: 0;
+
+    transform:
+        translateY(18px)
+        scale(0.96);
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    box-shadow:
+        0 18px 50px
+        rgba(40, 10, 35, 0.20);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* =========================================
+   MENU OPEN
+========================================= */
+
+.nexvo-global-menu.open {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================
+   MENU HEADER
+========================================= */
+
+.nexvo-menu-header {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   MENU BRAND
+========================================= */
+
+.nexvo-menu-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+/* =========================================
+   MENU LOGO
+========================================= */
+
+.nexvo-menu-logo {
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 16px
+        rgba(180, 20, 90, 0.20);
+
+}
+
+
+/* =========================================
+   MENU TITLE
+========================================= */
+
+.nexvo-menu-title {
+
+    color:
+        #7d123c;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================
+   MENU SUBTITLE
+========================================= */
+
+.nexvo-menu-subtitle {
+
+    margin-top: 3px;
+
+    color:
+        #777777;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.nexvo-menu-close {
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #fff0f6;
+
+    color:
+        #a3164d;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.nexvo-menu-close:hover {
+
+    background:
+        #ffe1ed;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.nexvo-menu-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.nexvo-menu-action {
+
+    width: 100%;
+
+    min-height: 68px;
+
+    padding: 11px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        #f0d9e3;
+
+    border-radius: 17px;
+
+    background:
+        #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-family:
+        inherit;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+/* =========================================
+   ACTION HOVER
+========================================= */
+
+.nexvo-menu-action:hover {
+
+    background:
+        #fff5f9;
+
+    border-color:
+        #d81b60;
+
+    transform:
+        translateX(2px);
+
+    box-shadow:
+        0 5px 16px
+        rgba(180, 20, 90, 0.08);
+
+}
+
+
+/* =========================================
+   ACTION ICON
+========================================= */
+
+.nexvo-action-icon {
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        #fff0f6;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   ACTION TEXT
+========================================= */
+
+.nexvo-action-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================
+   ACTION TITLE
+========================================= */
+
+.nexvo-action-text strong {
+
+    display: block;
+
+    color:
+        #252025;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================
+   ACTION DESCRIPTION
+========================================= */
+
+.nexvo-action-text small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        #858085;
+
+    font-size: 11px;
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================
+   ACTION ARROW
+========================================= */
+
+.nexvo-action-arrow {
+
+    flex-shrink: 0;
+
+    color:
+        #c01755;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (
+    max-width: 480px
+) {
+
+    .nexvo-global-button {
+
+        left: 16px;
+        bottom: 16px;
+
+        width: 56px;
+        height: 56px;
+
+    }
+
+
+    .nexvo-global-menu {
+
+        left: 16px;
+        bottom: 84px;
+
+        width:
+            calc(100vw - 32px);
+
+        padding: 16px;
+
+        border-radius: 21px;
+
+    }
+
+
+    .nexvo-menu-action {
+
+        min-height: 64px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL HEIGHT SCREENS
+========================================= */
+
+@media (
+    max-height: 650px
+) {
+
+    .nexvo-global-menu {
+
+        max-height:
+            calc(100vh - 105px);
+
+        overflow-y: auto;
+
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.nexvo-global-button:focus-visible,
+.nexvo-menu-close:focus-visible,
+.nexvo-menu-action:focus-visible {
+
+    outline:
+        3px solid
+        rgba(216, 27, 96, 0.30);
+
+    outline-offset:
+        3px;
+
+}

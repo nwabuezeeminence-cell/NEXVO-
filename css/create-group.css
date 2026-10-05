@@ -1,0 +1,588 @@
+/* =========================================
+   NEXVO
+   CREATE GROUP PAGE
+========================================= */
+
+.create-group-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 22px 20px 110px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.create-group-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.create-group-back {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 14px;
+    background: #fff0f6;
+    color: #a3164d;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-group-back:hover {
+    background: #ffe3ef;
+}
+
+.create-group-header .page-label {
+    display: block;
+    color: #c01755;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+}
+
+.create-group-header h1 {
+    margin: 0;
+    color: #29232a;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   GROUP PREVIEW
+========================================= */
+
+.group-preview {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 1px solid #f0d9e3;
+    border-radius: 21px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fb,
+            #ffffff
+        );
+}
+
+.group-photo {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 21px;
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow:
+        0 8px 22px
+        rgba(180, 20, 90, 0.20);
+}
+
+.group-photo > span:first-child {
+    font-size: 29px;
+}
+
+.photo-camera {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    color: #a3164d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    box-shadow:
+        0 3px 10px
+        rgba(30, 10, 30, 0.15);
+}
+
+.group-preview h2 {
+    margin: 0;
+    color: #29232a;
+    font-size: 18px;
+}
+
+.group-preview p {
+    margin: 5px 0 0;
+    color: #837a81;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   GROUP SECTIONS
+========================================= */
+
+.group-section {
+    margin-bottom: 18px;
+    padding: 18px;
+    border: 1px solid #f0d9e3;
+    border-radius: 21px;
+    background: white;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #2b242a;
+    font-size: 17px;
+}
+
+.section-heading p {
+    margin: 5px 0 0;
+    color: #837a81;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-field {
+    position: relative;
+    margin-bottom: 17px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+.form-field label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 7px;
+    color: #3a3238;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-field label span {
+    color: #aaa1a7;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ead3dd;
+    border-radius: 14px;
+    background: #fffafd;
+    color: #29232a;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-field input {
+    height: 49px;
+    padding: 0 12px;
+}
+
+.form-field textarea {
+    padding: 12px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #d81b60;
+    box-shadow:
+        0 0 0 4px
+        rgba(216, 27, 96, 0.07);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #aaa1a7;
+}
+
+.form-field > small {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #aaa1a7;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   MEMBER HEADING
+========================================= */
+
+.member-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.member-heading > div {
+    flex: 1;
+}
+
+#selectedCount {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 11px;
+    background: #fff0f6;
+    color: #a3164d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MEMBER SEARCH
+========================================= */
+
+.member-search {
+    height: 48px;
+    box-sizing: border-box;
+    border: 1px solid #ead3dd;
+    border-radius: 14px;
+    background: #fffafd;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 11px;
+    margin-bottom: 13px;
+}
+
+.member-search:focus-within {
+    border-color: #d81b60;
+    box-shadow:
+        0 0 0 4px
+        rgba(216, 27, 96, 0.07);
+}
+
+.member-search > span {
+    font-size: 17px;
+    color: #a3164d;
+}
+
+.member-search input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #29232a;
+    font-size: 13px;
+}
+
+.member-search input::placeholder {
+    color: #aaa1a7;
+}
+
+.member-search button {
+    display: none;
+    width: 29px;
+    height: 29px;
+    border: none;
+    border-radius: 50%;
+    background: #fff0f6;
+    color: #a3164d;
+    font-size: 19px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-search button.visible {
+    display: flex;
+}
+
+
+/* =========================================
+   MEMBERS LIST
+========================================= */
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.member-empty {
+    padding: 20px 8px;
+    text-align: center;
+    color: #8a8188;
+    font-size: 12px;
+}
+
+.member-empty-icon {
+    margin-bottom: 7px;
+    font-size: 26px;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px;
+    border: 1px solid #f1dfe6;
+    border-radius: 16px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.member-item:hover {
+    background: #fff8fb;
+    border-color: #e5b5c8;
+}
+
+.member-item.selected {
+    background: #fff2f7;
+    border-color: #d81b60;
+}
+
+.member-avatar {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.member-info strong {
+    display: block;
+    color: #30282e;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.member-info span {
+    display: block;
+    margin-top: 3px;
+    color: #8a8188;
+    font-size: 10px;
+}
+
+.member-check {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #d9c5cd;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.member-item.selected .member-check {
+    border-color: #d81b60;
+    background: #d81b60;
+    color: white;
+}
+
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.create-group-button {
+    width: 100%;
+    height: 53px;
+    border: none;
+    border-radius: 17px;
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow:
+        0 9px 24px
+        rgba(180, 20, 90, 0.18);
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.create-group-button:hover {
+    transform: translateY(-1px);
+}
+
+.create-group-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.group-message {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+    background: rgba(20, 10, 20, 0.30);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.group-message.open {
+    display: flex;
+}
+
+.message-card {
+    width: min(350px, 100%);
+    box-sizing: border-box;
+    padding: 25px;
+    border-radius: 24px;
+    background: white;
+    text-align: center;
+    box-shadow:
+        0 20px 55px
+        rgba(30, 10, 30, 0.20);
+}
+
+.message-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 13px;
+    border-radius: 17px;
+    background: #fff0f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.message-card h3 {
+    margin: 0;
+    color: #30282e;
+    font-size: 18px;
+}
+
+.message-card p {
+    margin: 7px 0 18px;
+    color: #827980;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.message-card button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 13px;
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .create-group-page {
+        padding:
+            18px
+            18px
+            100px;
+    }
+
+    .create-group-header h1 {
+        font-size: 25px;
+    }
+
+    .group-section {
+        padding: 16px;
+        border-radius: 19px;
+    }
+
+    .group-preview {
+        padding: 14px;
+    }
+
+}

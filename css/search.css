@@ -1,0 +1,646 @@
+/* =========================================
+   NEXVO
+   UNIVERSAL SEARCH
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.search-page {
+
+    min-height: 100vh;
+
+    padding-bottom: 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fff5f9
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.search-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        20px
+        16px
+        10px;
+
+}
+
+
+.search-back {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 7px 24px
+        rgba(140,0,60,.10);
+
+    font-size: 29px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+
+    flex: 1;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        0
+        13px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    box-shadow:
+        0 7px 25px
+        rgba(140,0,60,.09);
+
+}
+
+
+.search-icon {
+
+    font-size: 25px;
+
+    opacity: .5;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+}
+
+
+.search-box input::placeholder {
+
+    opacity: .45;
+
+}
+
+
+.clear-search {
+
+    display: none;
+
+    width: 25px;
+
+    height: 25px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.08);
+
+    cursor: pointer;
+
+}
+
+
+.clear-search.visible {
+
+    display: block;
+
+}
+
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.search-filters {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding:
+        10px
+        16px
+        17px;
+
+    scrollbar-width: none;
+
+}
+
+
+.search-filters::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.search-filter {
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding:
+        10px
+        17px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.search-filter.active {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9004d,
+            #ef416d
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(190,0,75,.18);
+
+}
+
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.search-results {
+
+    padding:
+        0
+        16px;
+
+}
+
+
+.search-section-title {
+
+    margin:
+        5px
+        0
+        12px;
+
+    font-size: 13px;
+
+    opacity: .55;
+
+}
+
+
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.search-result {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    margin-bottom: 9px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 19px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    box-shadow:
+        0 7px 24px
+        rgba(140,0,60,.07);
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.result-avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd7e5,
+            #fff0f5
+        );
+
+    font-size: 20px;
+
+}
+
+
+.result-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.result-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.result-name {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.result-username {
+
+    margin:
+        3px
+        0
+        0;
+
+    font-size: 11px;
+
+    opacity: .5;
+
+}
+
+
+.result-type {
+
+    font-size: 10px;
+
+    opacity: .4;
+
+}
+
+
+
+/* =========================================
+   EMPTY SEARCH
+========================================= */
+
+.search-empty {
+
+    padding:
+        70px
+        20px;
+
+    text-align: center;
+
+}
+
+
+.search-empty-icon {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin:
+        0
+        auto
+        17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(200,0,75,.12),
+            rgba(255,70,100,.07)
+        );
+
+    font-size: 34px;
+
+}
+
+
+.search-empty h2 {
+
+    margin:
+        0
+        0
+        7px;
+
+    font-size: 19px;
+
+}
+
+
+.search-empty p {
+
+    max-width: 290px;
+
+    margin: auto;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    opacity: .5;
+
+}
+
+
+
+/* =========================================
+   FLOATING PLUS
+========================================= */
+
+.floating-plus {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 22px;
+
+    z-index: 100;
+
+    width: 57px;
+
+    height: 57px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9004d,
+            #ef416d
+        );
+
+    font-size: 31px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(190,0,75,.28);
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   PLUS MENU
+========================================= */
+
+.nexvo-plus-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 150;
+
+    background:
+        rgba(70,0,30,.18);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.nexvo-plus-overlay.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.nexvo-plus-menu {
+
+    position: fixed;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 91px;
+
+    z-index: 160;
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(90,0,40,.20);
+
+    transform:
+        translateY(20px)
+        scale(.96);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .28s ease;
+
+}
+
+
+.nexvo-plus-menu.active {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.plus-action {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background: transparent;
+
+    text-align: left;
+
+}
+
+
+.plus-action:active {
+
+    background:
+        rgba(200,0,70,.08);
+
+}
+
+
+.plus-action span {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(220,20,90,.09);
+
+    font-size: 20px;
+
+}

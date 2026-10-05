@@ -1,0 +1,696 @@
+/* =========================================
+   NEXVO
+   NOTIFICATIONS
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.notifications-page {
+
+    min-height: 100vh;
+
+    padding-bottom: 105px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fff5f9
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.notifications-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        22px
+        18px
+        12px;
+
+}
+
+
+.back-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    box-shadow:
+        0 8px 25px
+        rgba(160,0,60,.10);
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+.header-title {
+
+    flex: 1;
+
+}
+
+
+.header-title h1 {
+
+    margin: 0;
+
+    font-size: 23px;
+
+}
+
+
+.header-title p {
+
+    margin:
+        4px
+        0
+        0;
+
+    font-size: 12px;
+
+    opacity: .55;
+
+}
+
+
+.mark-read-button {
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding:
+        9px
+        11px;
+
+    background:
+        rgba(190,0,75,.08);
+
+    color:
+        #a90045;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.notification-filters {
+
+    display: flex;
+
+    gap: 8px;
+
+    padding:
+        10px
+        18px
+        16px;
+
+}
+
+
+.notification-filter {
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding:
+        10px
+        18px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    color:
+        #555;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.notification-filter.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c00051,
+            #ef416d
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 20px
+        rgba(190,0,75,.18);
+
+}
+
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.notifications-list {
+
+    padding:
+        0
+        18px;
+
+}
+
+
+
+/* =========================================
+   NOTIFICATION CARD
+========================================= */
+
+.notification-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 21px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 8px 28px
+        rgba(150,0,60,.07);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+.notification-card:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+.notification-card.unread {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,235,243,.96),
+            rgba(255,250,252,.94)
+        );
+
+}
+
+
+.notification-card.unread::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 14px;
+
+    top: 17px;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #d00057;
+
+}
+
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.notification-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(210,0,80,.12),
+            rgba(255,80,110,.08)
+        );
+
+    font-size: 22px;
+
+}
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.notification-content {
+
+    flex: 1;
+
+    padding-right: 12px;
+
+}
+
+
+.notification-title {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.notification-message {
+
+    margin:
+        4px
+        0
+        0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    opacity: .58;
+
+}
+
+
+.notification-time {
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    opacity: .4;
+
+}
+
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.notifications-empty {
+
+    text-align: center;
+
+    padding:
+        80px
+        25px;
+
+}
+
+
+.notifications-empty-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin:
+        0
+        auto
+        18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(210,0,80,.12),
+            rgba(255,70,100,.08)
+        );
+
+    font-size: 35px;
+
+}
+
+
+.notifications-empty h2 {
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size: 19px;
+
+}
+
+
+.notifications-empty p {
+
+    margin: auto;
+
+    max-width: 280px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    opacity: .52;
+
+}
+
+
+
+/* =========================================
+   BOTTOM NAV
+========================================= */
+
+.nexvo-bottom-nav {
+
+    position: fixed;
+
+    left: 12px;
+
+    right: 12px;
+
+    bottom: 12px;
+
+    height: 68px;
+
+    z-index: 100;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.15fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    padding: 6px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.86);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 15px 45px
+        rgba(100,0,40,.15);
+
+}
+
+
+.nexvo-nav-item {
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 10px;
+
+    opacity: .55;
+
+    cursor: pointer;
+
+}
+
+
+.nav-icon {
+
+    font-size: 21px;
+
+}
+
+
+.nexvo-plus-button {
+
+    width: 53px;
+
+    height: 53px;
+
+    margin: auto;
+
+    border: none;
+
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9004d,
+            #f33d69
+        );
+
+    color: white;
+
+    font-size: 31px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 25px
+        rgba(190,0,75,.28);
+
+}
+
+
+
+/* =========================================
+   PLUS MENU
+========================================= */
+
+.nexvo-plus-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 150;
+
+    background:
+        rgba(80,0,30,.18);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.nexvo-plus-overlay.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.nexvo-plus-menu {
+
+    position: fixed;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 92px;
+
+    z-index: 160;
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(90,0,40,.20);
+
+    transform:
+        translateY(20px)
+        scale(.96);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        .28s ease;
+
+}
+
+
+.nexvo-plus-menu.active {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.plus-action {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 14px;
+
+    border-radius: 17px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.plus-action:hover {
+
+    background:
+        rgba(200,0,70,.07);
+
+}
+
+
+.plus-action span {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(220,20,90,.09);
+
+    font-size: 20px;
+
+}

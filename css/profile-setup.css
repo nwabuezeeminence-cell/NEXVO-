@@ -1,0 +1,663 @@
+/* =========================================
+   NEXVO
+   PROFILE SETUP
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.profile-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255, 20, 120, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(220, 20, 60, 0.08),
+            transparent 30%
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.profile-header {
+
+    width: 100%;
+
+    padding: 22px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.brand-small {
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b0004f,
+            #ff1744
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.setup-progress {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.progress-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(120, 120, 120, 0.25);
+
+    transition: 0.3s ease;
+
+}
+
+
+.progress-dot.active {
+
+    width: 25px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b0004f,
+            #ff1744
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 20, 100, 0.4);
+
+}
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.profile-content {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    padding:
+        20px
+        24px
+        50px;
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.profile-intro {
+
+    text-align: center;
+
+    margin-bottom: 32px;
+
+}
+
+
+.intro-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 18px;
+
+    margin-bottom: 15px;
+
+    font-size: 25px;
+
+    background:
+        rgba(255, 20, 100, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 20, 100, 0.15);
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 20, 100, 0.08);
+
+}
+
+
+.profile-intro h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 850;
+
+}
+
+
+.profile-intro p {
+
+    margin:
+        10px
+        auto
+        0;
+
+    max-width: 400px;
+
+    line-height: 1.6;
+
+    color: #707070;
+
+}
+
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.photo-section {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.profile-photo {
+
+    width: 112px;
+
+    height: 112px;
+
+    margin: 0 auto 14px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    font-size: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 20, 120, 0.12),
+            rgba(220, 20, 60, 0.10)
+        );
+
+    border:
+        2px solid
+        rgba(255, 20, 100, 0.2);
+
+    box-shadow:
+        0 10px 35px
+        rgba(255, 20, 100, 0.12);
+
+}
+
+
+.profile-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+
+}
+
+
+.photo-button {
+
+    display: inline-flex;
+
+    padding:
+        9px
+        18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    color: #b0004f;
+
+    background:
+        rgba(255, 20, 100, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 20, 100, 0.18);
+
+    transition: 0.25s ease;
+
+}
+
+
+.photo-button:active {
+
+    transform: scale(0.96);
+
+}
+
+
+.photo-note {
+
+    margin-top: 9px;
+
+    font-size: 12px;
+
+    color: #999;
+
+}
+
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.profile-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+}
+
+
+.input-group {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.input-group label {
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+}
+
+
+.optional {
+
+    margin-left: 5px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #999;
+
+}
+
+
+.input-group input,
+.input-group textarea {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 17px;
+
+    padding:
+        15px
+        16px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid
+        rgba(150, 150, 150, 0.18);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.035);
+
+    transition: 0.25s ease;
+
+}
+
+
+.input-group textarea {
+
+    min-height: 110px;
+
+    resize: vertical;
+
+}
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+
+    border-color:
+        rgba(255, 20, 100, 0.45);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 20, 100, 0.07);
+
+}
+
+
+.input-group small {
+
+    color: #999;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* =========================================
+   USERNAME
+========================================= */
+
+.username-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid
+        rgba(150, 150, 150, 0.18);
+
+    transition: 0.25s ease;
+
+}
+
+
+.username-wrapper:focus-within {
+
+    border-color:
+        rgba(255, 20, 100, 0.45);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 20, 100, 0.07);
+
+}
+
+
+.username-wrapper span {
+
+    padding-left: 16px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #b0004f;
+
+}
+
+
+.username-wrapper input {
+
+    border: none;
+
+    box-shadow: none;
+
+    background: transparent;
+
+}
+
+
+.username-wrapper input:focus {
+
+    box-shadow: none;
+
+    border: none;
+
+}
+
+
+
+/* =========================================
+   BIO COUNTER
+========================================= */
+
+.character-count {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 9px;
+
+    font-size: 11px;
+
+    color: #999;
+
+}
+
+
+
+/* =========================================
+   CONTINUE BUTTON
+========================================= */
+
+.continue-button {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    margin-top: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a9004c,
+            #ed1644
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(220, 20, 80, 0.22);
+
+    transition: 0.25s ease;
+
+}
+
+
+.continue-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+.arrow {
+
+    font-size: 20px;
+
+}
+
+
+
+/* =========================================
+   SKIP
+========================================= */
+
+.skip-button {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    color: #888;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+}
+
+
+.skip-button:hover {
+
+    color: #b0004f;
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .profile-content {
+
+        padding:
+            10px
+            20px
+            40px;
+
+    }
+
+
+    .profile-intro h1 {
+
+        font-size: 27px;
+
+    }
+
+}

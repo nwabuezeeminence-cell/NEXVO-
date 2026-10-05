@@ -1,0 +1,372 @@
+/* =========================================
+   NEXVO
+   MY VIDEOS
+========================================= */
+
+.my-videos-page {
+
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    color: #252025;
+
+    padding-bottom: 30px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.my-videos-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding: 16px 18px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    backdrop-filter:
+        blur(16px);
+
+    border-bottom:
+        1px solid
+        rgba(180,20,90,0.10);
+
+}
+
+
+.my-videos-back,
+.my-videos-upload {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.my-videos-back {
+
+    background:
+        #fff0f6;
+
+    color:
+        #a3164d;
+
+    font-size: 30px;
+
+}
+
+
+.my-videos-upload {
+
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(180,20,90,0.22);
+
+}
+
+
+.my-videos-heading {
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+
+.my-videos-heading span {
+
+    display: block;
+
+    color:
+        #b01753;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.15em;
+
+}
+
+
+.my-videos-heading h1 {
+
+    margin: 3px 0 0;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   VIDEO LIST
+========================================= */
+
+.my-videos-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 16px;
+
+}
+
+
+.my-video-card {
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        #f0d9e3;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px
+        rgba(40,10,30,0.08);
+
+}
+
+
+.my-video-player {
+
+    width: 100%;
+
+    aspect-ratio: 9 / 16;
+
+    display: block;
+
+    object-fit: cover;
+
+    background:
+        #160b12;
+
+}
+
+
+.my-video-info {
+
+    padding: 11px;
+
+}
+
+
+.my-video-info h2 {
+
+    margin: 0;
+
+    color:
+        #741038;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+
+}
+
+
+.my-video-info p {
+
+    margin: 6px 0 0;
+
+    color:
+        #777;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+}
+
+
+.my-video-date {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color:
+        #a3164d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.my-videos-empty {
+
+    min-height:
+        calc(100vh - 100px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.my-videos-empty-icon {
+
+    width: 74px;
+
+    height: 74px;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 15px 35px
+        rgba(180,20,90,0.22);
+
+}
+
+
+.my-videos-empty h2 {
+
+    margin:
+        18px 0 7px;
+
+    font-size: 20px;
+
+}
+
+
+.my-videos-empty p {
+
+    max-width: 320px;
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+.my-videos-empty button {
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 12px 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d81b60,
+            #9c1748
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .my-videos-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}

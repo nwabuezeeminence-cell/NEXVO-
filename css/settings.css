@@ -1,0 +1,455 @@
+/* =========================================
+   NEXVO
+   SETTINGS PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.settings-page {
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px 18px 110px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.settings-back {
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fff0f6;
+
+    color: #a3164d;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.settings-back:hover {
+
+    background: #ffe3ef;
+
+    transform: translateX(-2px);
+
+}
+
+
+.settings-header .page-label {
+
+    display: block;
+
+    color: #a3164d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.settings-header h1 {
+
+    margin: 3px 0 0;
+
+    color: #241d22;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+
+}
+
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.settings-section {
+
+    margin-bottom: 25px;
+
+}
+
+
+.settings-section h2 {
+
+    margin: 0 0 10px 5px;
+
+    color: #8e1747;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+
+/* =========================================
+   SETTING ITEM
+========================================= */
+
+.settings-item {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    margin-bottom: 9px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #f0d9e3;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.settings-item:hover {
+
+    transform: translateY(-1px);
+
+    border-color: #d81b60;
+
+    background: #fff8fb;
+
+    box-shadow:
+        0 7px 20px
+        rgba(180, 20, 90, 0.08);
+
+}
+
+
+.settings-item:active {
+
+    transform: scale(0.985);
+
+}
+
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.settings-icon {
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #fff0f6;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+}
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.settings-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.settings-content strong {
+
+    display: block;
+
+    color: #292329;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.settings-content small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #858085;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+}
+
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.settings-arrow {
+
+    flex-shrink: 0;
+
+    color: #c01755;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =========================================
+   VALUE
+========================================= */
+
+.settings-value {
+
+    flex-shrink: 0;
+
+    color: #a3164d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   VERSION
+========================================= */
+
+.settings-version {
+
+    margin-top: 35px;
+
+    text-align: center;
+
+    color: #a3164d;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.settings-version span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #999;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .settings-page {
+
+        padding:
+            18px
+            16px
+            100px;
+
+    }
+
+
+    .settings-header {
+
+        margin-bottom: 24px;
+
+    }
+
+
+    .settings-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .settings-item {
+
+        min-height: 66px;
+
+        padding: 10px 12px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .settings-icon {
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 13px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+html[data-theme="dark"] .settings-page {
+
+    background: #171117;
+
+}
+
+
+html[data-theme="dark"] .settings-header h1 {
+
+    color: #ffffff;
+
+}
+
+
+html[data-theme="dark"] .settings-item {
+
+    background: #211a20;
+
+    border-color: #3a2933;
+
+}
+
+
+html[data-theme="dark"] .settings-content strong {
+
+    color: #ffffff;
+
+}
+
+
+html[data-theme="dark"] .settings-content small {
+
+    color: #aaa1a7;
+
+}
+
+
+html[data-theme="dark"] .settings-section h2 {
+
+    color: #e05288;
+
+}
+
+
+html[data-theme="dark"] .settings-back {
+
+    background: #321b28;
+
+    color: #f05b91;
+
+}
+
+
+html[data-theme="dark"] .settings-version span {
+
+    color: #999;
+
+}

@@ -1,0 +1,610 @@
+/* =========================================
+   NEXVO
+   QR SCANNER
+========================================= */
+
+
+.scanner-page {
+
+    min-height: 100vh;
+
+    background:
+        #12070d;
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.scanner-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        20px
+        18px;
+
+}
+
+
+.scanner-close {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    color: white;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+}
+
+
+.scanner-header h1 {
+
+    margin: 0;
+
+    font-size: 19px;
+
+}
+
+
+.scanner-header p {
+
+    margin:
+        4px
+        0
+        0;
+
+    font-size: 10px;
+
+    opacity: .55;
+
+}
+
+
+
+/* =========================================
+   CAMERA
+========================================= */
+
+.camera-section {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 390px;
+
+    overflow: hidden;
+
+    background:
+        #080508;
+
+}
+
+
+.camera-reader {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.camera-reader video {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    object-fit: cover;
+
+}
+
+
+.camera-reader img {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.scan-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+
+.scan-corner {
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-color: #ff4f83;
+
+    border-style: solid;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(255,79,131,.65)
+        );
+
+}
+
+
+.scan-corner.top-left {
+
+    top: 65px;
+
+    left: 50px;
+
+    border-width:
+        4px
+        0
+        0
+        4px;
+
+}
+
+
+.scan-corner.top-right {
+
+    top: 65px;
+
+    right: 50px;
+
+    border-width:
+        4px
+        4px
+        0
+        0;
+
+}
+
+
+.scan-corner.bottom-left {
+
+    bottom: 65px;
+
+    left: 50px;
+
+    border-width:
+        0
+        0
+        4px
+        4px;
+
+}
+
+
+.scan-corner.bottom-right {
+
+    bottom: 65px;
+
+    right: 50px;
+
+    border-width:
+        0
+        4px
+        4px
+        0;
+
+}
+
+
+.scan-line {
+
+    position: absolute;
+
+    left: 55px;
+
+    right: 55px;
+
+    top: 50%;
+
+    height: 2px;
+
+    background:
+        #ff4f83;
+
+    box-shadow:
+        0 0 13px
+        rgba(255,79,131,.8);
+
+    animation:
+        scanMove 2.2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes scanMove {
+
+    0% {
+
+        transform:
+            translateY(-125px);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(125px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-125px);
+
+    }
+
+}
+
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.scanner-status {
+
+    padding:
+        30px
+        25px;
+
+    text-align: center;
+
+}
+
+
+.status-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    margin:
+        0
+        auto
+        12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size: 23px;
+
+}
+
+
+.scanner-status h2 {
+
+    margin:
+        0
+        0
+        7px;
+
+    font-size: 16px;
+
+}
+
+
+.scanner-status p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    opacity: .5;
+
+}
+
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.scan-result {
+
+    display: none;
+
+    padding:
+        25px
+        20px;
+
+    text-align: center;
+
+}
+
+
+.scan-result.active {
+
+    display: block;
+
+}
+
+
+.result-avatar {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin:
+        0
+        auto
+        12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    font-size: 30px;
+
+}
+
+
+.scan-result h2 {
+
+    margin:
+        0
+        0
+        4px;
+
+    font-size: 19px;
+
+}
+
+
+.scan-result > p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    opacity: .5;
+
+}
+
+
+.result-id {
+
+    margin:
+        20px
+        auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.result-id span {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: .4;
+
+}
+
+
+.result-id strong {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.add-scanned-button,
+.scan-again-button,
+.invalid-result button {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 14px;
+
+    margin:
+        5px
+        auto;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.add-scanned-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9004d,
+            #ef416d
+        );
+
+    color: white;
+
+}
+
+
+.scan-again-button {
+
+    background:
+        rgba(255,255,255,.09);
+
+    color: white;
+
+}
+
+
+
+/* =========================================
+   INVALID
+========================================= */
+
+.invalid-result {
+
+    display: none;
+
+    padding:
+        35px
+        25px;
+
+    text-align: center;
+
+}
+
+
+.invalid-result.active {
+
+    display: block;
+
+}
+
+
+.invalid-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    margin:
+        0
+        auto
+        12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.09);
+
+    font-weight: 900;
+
+    font-size: 20px;
+
+}
+
+
+.invalid-result h2 {
+
+    margin:
+        0
+        0
+        7px;
+
+    font-size: 17px;
+
+}
+
+
+.invalid-result p {
+
+    max-width: 290px;
+
+    margin:
+        auto
+        auto
+        20px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    opacity: .5;
+
+}
+
+
+.invalid-result button {
+
+    background:
+        rgba(255,255,255,.10);
+
+    color: white;
+
+}

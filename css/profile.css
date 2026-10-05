@@ -1,0 +1,340 @@
+/* =========================================
+   NEXVO
+   PROFILE
+========================================= */
+
+
+.profile-page {
+
+    min-height: 100vh;
+
+    padding-bottom: 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fff5f9
+        );
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.profile-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        20px
+        18px;
+
+}
+
+
+.profile-header h1 {
+
+    margin: 0;
+
+    font-size: 19px;
+
+}
+
+
+.profile-back,
+.edit-profile {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+.profile-back {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 7px 22px
+        rgba(150,0,60,.08);
+
+    font-size: 29px;
+
+}
+
+
+.edit-profile {
+
+    padding:
+        9px
+        12px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(190,0,75,.08);
+
+    color: #b9004d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+
+    padding:
+        20px;
+
+    text-align: center;
+
+}
+
+
+.profile-avatar {
+
+    width: 92px;
+
+    height: 92px;
+
+    margin:
+        0
+        auto
+        15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd7e5,
+            #fff0f5
+        );
+
+    font-size: 37px;
+
+}
+
+
+.profile-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+
+}
+
+
+.profile-card h2 {
+
+    margin:
+        0
+        0
+        4px;
+
+    font-size: 21px;
+
+}
+
+
+.profile-username,
+#profileUsername {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    opacity: .5;
+
+}
+
+
+.profile-bio {
+
+    max-width: 300px;
+
+    margin:
+        13px
+        auto
+        0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================
+   ID CARD
+========================================= */
+
+.identity-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin:
+        0
+        18px;
+
+    padding: 17px;
+
+    border-radius: 21px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 8px 28px
+        rgba(140,0,60,.07);
+
+}
+
+
+.identity-card div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.identity-label {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: .45;
+
+}
+
+
+.identity-card strong {
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.identity-card button {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding:
+        9px
+        12px;
+
+    background:
+        rgba(190,0,75,.08);
+
+    color: #b9004d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.profile-section {
+
+    margin:
+        25px
+        18px
+        0;
+
+}
+
+
+.profile-section h3 {
+
+    margin:
+        0
+        0
+        10px;
+
+    font-size: 13px;
+
+}
+
+
+.info-card {
+
+    padding: 16px;
+
+    border-radius: 19px;
+
+    background:
+        rgba(255,255,255,.75);
+
+}
+
+
+.info-card p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    opacity: .55;
+
+}
