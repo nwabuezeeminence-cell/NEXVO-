@@ -22,22 +22,26 @@
 
     <title>NEXVO</title>
 
-    <!-- ================================
-         GLOBAL CSS
-    ================================= -->
-
     <link
         rel="stylesheet"
-        href="/css/global.css"
+        href="css/global.css"
     >
 
-    <!-- ================================
-         SPLASH CSS
-    ================================= -->
-
     <link
         rel="stylesheet"
-        href="/css/splash.css"
+        href="css/splash.css"
+    >
+
+    <!--
+        GitHub Pages entry point.
+
+        After the splash screen, visitors
+        enter the main NEXVO application.
+    -->
+
+    <meta
+        http-equiv="refresh"
+        content="3;url=pages/home.html"
     >
 
 </head>
@@ -45,23 +49,13 @@
 
 <body>
 
-    <!-- =================================
-         NEXVO APPLICATION
-    ================================= -->
-
     <main id="app">
-
-        <!-- =================================
-             SPLASH SCREEN
-        ================================= -->
 
         <section
             id="splashScreen"
             class="splash-screen"
             aria-label="NEXVO loading screen"
         >
-
-            <!-- Background glow -->
 
             <div
                 class="splash-glow splash-glow-one"
@@ -72,20 +66,22 @@
             ></div>
 
 
-            <!-- Animated orbit -->
-
             <div class="logo-orbit">
 
-                <span class="orbit-dot orbit-dot-one"></span>
+                <span
+                    class="orbit-dot orbit-dot-one"
+                ></span>
 
-                <span class="orbit-dot orbit-dot-two"></span>
+                <span
+                    class="orbit-dot orbit-dot-two"
+                ></span>
 
-                <span class="orbit-dot orbit-dot-three"></span>
+                <span
+                    class="orbit-dot orbit-dot-three"
+                ></span>
 
             </div>
 
-
-            <!-- NEXVO Logo -->
 
             <div
                 id="nexvoLogo"
@@ -111,8 +107,6 @@
             </div>
 
 
-            <!-- Tagline -->
-
             <p
                 id="nexvoTagline"
                 class="nexvo-tagline"
@@ -120,8 +114,6 @@
                 Connect. Express. Belong.
             </p>
 
-
-            <!-- Loading indicator -->
 
             <div
                 id="splashLoader"
@@ -136,43 +128,7 @@
 
         </section>
 
-
-        <!-- =================================
-             FUTURE APPLICATION CONTENT
-        ================================= -->
-
-        <section
-            id="appContent"
-            class="app-content"
-            aria-hidden="true"
-        >
-
-            <!--
-
-                Future screens will appear here.
-
-                Onboarding
-                Login
-                Sign Up
-                Home
-                Chats
-                Profile
-                etc.
-
-            -->
-
-        </section>
-
     </main>
-
-
-    <!-- =================================
-         JAVASCRIPT
-    ================================= -->
-
-    <script src="/js/config.js"></script>
-
-    <script src="/js/splash.js"></script>
 
 </body>
 
