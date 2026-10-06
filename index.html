@@ -22,6 +22,7 @@
 
     <title>NEXVO</title>
 
+
     <link
         rel="stylesheet"
         href="css/global.css"
@@ -30,18 +31,6 @@
     <link
         rel="stylesheet"
         href="css/splash.css"
-    >
-
-    <!--
-        GitHub Pages entry point.
-
-        After the splash screen, visitors
-        enter the main NEXVO application.
-    -->
-
-    <meta
-        http-equiv="refresh"
-        content="3;url=pages/home.html"
     >
 
 </head>
@@ -129,6 +118,27 @@
         </section>
 
     </main>
+
+
+    <!-- Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-database-compat.js"></script>
+
+
+    <!-- NEXVO Firebase configuration -->
+
+    <script src="js/firebase-config.js"></script>
+
+    <script src="js/firebase-init.js"></script>
+
+
+    <!-- NEXVO startup -->
+
+    <script src="js/startup.js"></script>
 
 </body>
 
